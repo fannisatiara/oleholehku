@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/royanagist/oleholehku/issues"
   },
-  "homepage": "https://github.com/royanagist/oleholehku#readme"
+  "homepage": "https://github.com/royanagist/oleholehku#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
 }
