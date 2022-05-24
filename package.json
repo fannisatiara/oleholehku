@@ -1,0 +1,19 @@
+{
+  "name": "oleholehku",
+  "version": "1.0.0",
+  "description": "Capstone project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/royanagist/oleholehku.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/royanagist/oleholehku/issues"
+  },
+  "homepage": "https://github.com/royanagist/oleholehku#readme"
+}
