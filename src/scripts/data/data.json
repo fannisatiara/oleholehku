@@ -1,0 +1,130 @@
+{
+    "list_oleh": [
+        {
+            "city": "Jakarta",
+            "name": "Kembang Goyang",
+            "image": "/src/public/img/kembang-goyang.jpg",
+            "description": "Kembang goyang termasuk camilan tradisional Betawi yang dibuat dengan cetakan berbentuk bunga. Camilan renyah ini bisa disajikan sebagai suguhan saat Lebaran. Teksturnya yang renyah serta rasanya yang gurih manis membuat banyak orang menyukainya. Kini camilan renyah manis ini banyak dijual di toko kue. Ada yang diberi wijen dan ada yang polos."
+        },
+        {
+            "city": "Jakarta",
+            "name": "Roti Buaya",
+            "image": "/src/public/img/roti-buaya.jpg",
+            "description": "Roti buaya adalah hidangan Betawi berupa roti manis berbentuk buaya. Roti buaya senantiasa hadir dalam upacara pernikahan dan kenduri tradisional Betawi."
+        },
+        {
+            "city": "Jakarta",
+            "name": "Telur Gabus Keju",
+            "image": "/src/public/img/telur-gabus-keju.jpg",
+            "description": "Kue telur gabus keju merupakan salah satu cemilan yang biasa disajikan saat hari raya Idul Fitri. Kue kering yang satu ini memiliki citarasa gurih, lezat, dan tekstur yang renyah. Telur gabus merupakan camilan yang terbuat dari campuran adonan telur, tepung, dan garam."
+        },
+        {
+            "city": "Jakarta",
+            "name": "Kue Semprong",
+            "image": "/src/public/img/kue-semprong.jpg",
+            "description": "Kue semprong adalah makanan kue kering yang berasal dari Betawi. Kue ini berbentuk selinder atau panjang seperti pipa dengan rasa yang khas dan unik. Rasa kue ini tidak terlalu manis dan akan renyah dan gurih ketika digigit."
+        },
+        {
+            "city": "Jakarta",
+            "name": "Akar Kelapa",
+            "image": "/src/public/img/akar-kelapa.jpg",
+            "description": "Kue akar kelapa adalah kue kering yang berasal dari Betawi dan sekitarnya. Kue ini umumnya disajikan bersama rengginang dan kacang goreng saat acara spesial, seperti ketika lebaran atau hajatan."
+        },
+        {
+            "city": "Jakarta",
+            "name": "Dodol Betawi",
+            "image": "/src/public/img/dodol-betawi.jpg",
+            "description": "Dodol betawi adalah jenis dodol khas suku Betawi. Dodol betawi berwarna hitam kecoklatan dengan variasi rasa rasa yang lebih sedikit daripada dodol dari daerah lain. Rasa dodol betawi hanya terdiri dari ketan putih, ketan hitam dan durian."
+        },
+        {
+            "city": "Jakarta",
+            "name": "Tape Uli",
+            "image": "/src/public/img/tape-uli.jpg",
+            "description": "Tape uli adalah salah satu kudapan tersohor di kalangan masyarakat Betawi yang begitu menggugah selera. Rasa tape ketan hitam yang manis dipadu dengan kenyalnya uli (ketan kukus) yang lembut gurih terasa memanjakan lidah."
+        },
+        {
+            "city": "Madiun",
+            "name": "Bluder Cokro",
+            "image": "/src/public/img/bluder-cokro.jpg",
+            "description": "Bluder Cokro merupakan produk roti legendaris yang berasal dari Madiun, Jawa Timur. Kelembutan dari roti Bluder Cokro memiliki tempat spesial tersendiri di hati masyarakat. Bluder Cokro berdiri pada tahun 1989 di Jalan Cokroaminoto no 36 Madiun."
+        },
+        {
+            "city": "Madiun",
+            "name": "Manco",
+            "image": "/src/public/img/manco.jpg",
+            "description": "Manco atau kue manco merupakan jajanan tradisional yang bisa ditemui di Madiun. Tekstur dari jajanan tradisional ini renyah serta lengket dari lapisan gula merah. Selain itu, manco memiliki cita rasa yang manis legit."
+        },
+        {
+            "city": "Madiun",
+            "name": "Brem",
+            "image": "/src/public/img/brem.jpg",
+            "description": "Brem adalah makanan yang berasal dari sari ketan yang dimasak dan dikeringkan, merupakan hasil dari fermentasi ketan hitam yang diambil sarinya saja yang kemudian diendapkan dalam waktu sekitar sehari semalam."
+        },
+        {
+            "city": "Madiun",
+            "name": "Madumongso",
+            "image": "/src/public/img/madumongso.jpg",
+            "description": "Madumongso adalah makanan ringan asal Madiun, Jawa Timur. Makanan ringan ini terbuat dari ketan hitam sebagai bahan dasarnya. Rasanya asam bercampur manis karena ketan hitam sebelumnya diolah dahulu menjadi tapai (melalui proses fermentasi)."
+        },
+        {
+            "city": "Tasikmalaya",
+            "name": "Opak",
+            "image": "/src/public/img/opak.jpg",
+            "description": "Opak adalah kudapan khas Sunda yang kering renyah sejenis dengan kerupuk. Opak berbeda bahan dasarnya dari kerupuk. Kerupuk terbuat dari tepung tapioka, sedangkan opak terbuat dari tepung beras/ketan yang diberi bumbu garam, gula,kelapa parut dan bumbu penyedap."
+        },
+        {
+            "city": "Tasikmalaya",
+            "name": "Saroja",
+            "image": "/src/public/img/saroja.jpg",
+            "description": "Seperti namanya kue ini berasal dari nama kembang seroja yang memiliki sebutan lain yaitu bunga teratai. Kue saroja biasanya menjadi suguhan pada saat-saat tertentu seperti perayaan, pernikahan, hari raya lebaran, dll."
+        },
+        {
+            "city": "Tasikmalaya",
+            "name": "Payung Geulis",
+            "image": "/src/public/img/payung-geulis.jpg",
+            "description": "Payung geulis merupakan ciri khas dan simbol kebanggaan masyarakat kota Tasikmalaya, juga merupakan aset yang sangat luar biasa yakni keindahan seninya telah dikenal ke seantero nusantara bahkan dunia. Payung geulis ini hanya bisa melindungi kita dari sengatan panas matahari saja. Hal tersebut dikarenakan payung ini terbuat dari kayu dengan penutupnya yang hanya dilapisi oleh kertas."
+        },
+        {
+            "city": "Tasikmalaya",
+            "name": "Kelom Geulis",
+            "image": "/src/public/img/kelom-geulis.jpg",
+            "description": "Kelom Geulis merupakan salah satu hasil kerajinan khas Kota Tasikmalaya berupa alas kaki wanita yang terbuat dari bahan baku kayu. Kelom diperkirakan diambil dari bahasa Belanda kelompen yang artinya sandal kayu, sedangkan geulis berasal dari bahasa Sunda yang artinya cantik."
+        },
+        {
+            "city": "Bandung",
+            "name": "Brownies Amanda",
+            "image": "/src/public/img/brownies-amanda.jpg",
+            "description": "Amanda Brownies atau lebih dikenal sebagai Brownies Amanda merupakan oleh-oleh khas Bandung yang sudah berdiri sejak tahun 1999. Kue-kue yang dibuat oleh Amanda Brownies ini merupakan favorit keluarga di Indonesia."
+        },
+        {
+            "city": "Bandung",
+            "name": "Cireng",
+            "image": "/src/public/img/cireng.jpg",
+            "description": "Cireng adalah makanan ringan yang berasal dari daerah Sunda yang dibuat dengan cara menggoreng campuran adonan yang berbahan utama tepung kanji atau tapioka. ahan makanan ini antara lain terdiri dari tepung kanji, tepung terigu, air, merica bubuk, garam, bawang putih, kedelai, daun bawang dan minyak goreng."
+        },
+        {
+            "city": "Bandung",
+            "name": "Batagor",
+            "image": "/src/public/img/batagor.jpg",
+            "description": "Batagor merupakan jajanan khas Bandung yang mengadaptasi gaya Tionghoa-Indonesia dan kini sudah dikenal hampir di seluruh wilayah Indonesia. Secara umum, batagor dibuat dari tahu yang dilembutkan dan diisi dengan adonan berbahan ikan tenggiri dan tepung tapioka lalu dibentuk menyerupai bola yang digoreng dalam minyak panas selama beberapa menit hingga matang."
+        },
+        {
+            "city": "Bandung",
+            "name": "Peuyeum",
+            "image": "/src/public/img/peuyeum.jpg",
+            "description": "Peuyeum merupakan salah satu kuliner khas yang ada di Kota dan Kabupaten Bandung. Nama kuliner ini terdiri dari dua kata, yaitu “Peuyeum” atau dalam bahasa Indonesia artinya tapai singkong. “Bandung” merupakan nama kota tempat produksi peuyeum tersebut, yaitu Kabupaten Bandung."
+        },
+        {
+            "city": "Bandung",
+            "name": "Bolen Kartika Sari",
+            "image": "/src/public/img/bolen-kartika-sari.jpg",
+            "description": "Bolen Kartika Sari merupakan salah satu oleh-oleh yang wajib dibawa bila kita berkunjung ke Bandung. Kartika Sari adalah toko kue legendaris yang menjadi trademark Kota Kembang. Selain pisang bolen, Kartika Sari juga menyediakan beberapa variant bollen lainnya, antara lain pisang bolen coklat, peuyeum (tapai) bolen, durian bolen, kacang hijau bolen dan apel bolen."
+        },
+        {
+            "city": "Bandung",
+            "name": "Tahu Susu Lembang",
+            "image": "/src/public/img/tahu-susu-lembang.jpg",
+            "description": "Meskipun memiliki nama tahu susu, akan tetapi bahan utama dari makanan ini masih sama seperti tahu pada umumnya yakni berupa kacang kedelai. Yang membedakan, campuran kedelai beserta bahan-bahan pendukung lainnya, selanjutnya dipadukan dengan susu murni. Hal inilah yang menjadikan tahu khas Lembang ini lebih gurih, lembut, creamy, akan tetapi tetap padat."
+        }
+    ]
+}
