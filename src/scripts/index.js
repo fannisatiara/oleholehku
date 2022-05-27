@@ -2,6 +2,7 @@
 /* eslint-disable no-param-reassign */
 import '../styles/main.css';
 import App from './views/app';
+import addProfileImage from './utils/profile-image';
 import personIcon from '../public/Person-placeholder.jpg';
 
 const personImages = document.querySelectorAll('#person');
@@ -14,3 +15,5 @@ const app = new App({
   content: document.querySelector('main'),
   hero: document.querySelector('#hero'),
 });
+
+addProfileImage.addRoyanImage();
