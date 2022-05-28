@@ -19,3 +19,4 @@ const app = new App({
 
 addProfileImage.addRoyanImage();
 addProfileImage.addFannisaImage();
+addProfileImage.addYogaImage();
