@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-param-reassign */
 import '../styles/main.css';
+import '../styles/explore.css';
 import App from './views/app';
 import addProfileImage from './utils/profile-image';
 import personIcon from '../public/Person-placeholder.jpg';

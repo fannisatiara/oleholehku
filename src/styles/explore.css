@@ -222,127 +222,71 @@ body {
         transition: 0.3s;
     }
   }
-  
-  /*--------------------------------------------------------------
-  # Hero Section
-  --------------------------------------------------------------*/
-  #hero {
-    width: 100%;
-    height: 100vh;
-    background: url("../public/hero-bg.jpg") center center;
-    background-size: cover;
-    position: relative;
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+    padding: 15px 0;
+    background: #f6f6f7;
+    margin-top: 80px;
   }
-  #hero .container {
-    padding-top: 80px;
+  .breadcrumbs h2 {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 400;
   }
-  #hero:before {
-    content: "";
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  #hero h1 {
-    margin: 0 0 10px 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #fff;
-  }
-  #hero h2 {
-    color: #eee;
-    margin-bottom: 40px;
-    font-size: 15px;
-    font-weight: 500;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  #hero .btn-get-started {
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     font-size: 14px;
-    letter-spacing: 1px;
+  }
+  .breadcrumbs ol li + li {
+    padding-left: 10px;
+  }
+  .breadcrumbs ol li + li::before {
     display: inline-block;
-    padding: 8px 28px;
-    border-radius: 50px;
-    transition: 0.5s;
-    margin: 10px;
-    border: 2px solid #fff;
-    color: #fff;
-  }
-  #hero .btn-get-started:hover {
-    background: #ffcd38 ;
-    border: 2px solid #ffcd38 ;
-  }
-  @media (min-width: 1024px) {
-    #hero {
-      background-attachment: fixed;
-    }
+    padding-right: 10px;
+    color: #4f4c55;
+    content: "/";
   }
   @media (max-width: 768px) {
-    #hero {
-      height: 100vh;
+    .breadcrumbs .d-flex {
+      display: block !important;
     }
-    #hero .container {
-      padding-top: 60px;
+    .breadcrumbs ol {
+      display: block;
     }
-    #hero h1 {
-      font-size: 32px;
-      line-height: 36px;
+    .breadcrumbs ol li {
+      display: inline-block;
     }
   }
+
   
-  /*--------------------------------------------------------------
-  # Sections General
-  --------------------------------------------------------------*/
-  section {
-    padding: 20px 0;
-    overflow: hidden;
-  }
-  
-  .section-bg {
-    background-color: #f6f6f7;
-  }
-  
-  .section-title {
-    padding-bottom: 30px;
-  }
-  .section-title h2 {
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-  }
-  .section-title h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 150px;
-    height: 3px;
-    background: #ffcd38 ;
-    bottom: 0;
-    left: 0;
-  }
-  .section-title p {
-    margin-bottom: 0;
-  }
-  
-  /*--------------------------------------------------------------
-  # Portfolio
-  --------------------------------------------------------------*/
-  .portfolio .portfolio-item {
+
+/*--------------------------------------------------------------
+# Explore
+--------------------------------------------------------------*/
+.portfolio .search-container {
+    padding: 0;
+    margin: auto 8px;
+}
+.portfolio .form-control {
+    font-size: 14px;
+}
+.portfolio .button-container {
+  padding: 0;
+  margin: auto 8px;
+}
+.portfolio .portfolio-item {
     margin-bottom: 30px;
   }
   .portfolio #portfolio-flters {
     padding: 0;
-    margin: 0 auto 20px auto;
+    margin:  auto 10px auto;
     list-style: none;
     text-align: center;
   }
@@ -362,12 +306,13 @@ body {
   }
   .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
     color: #fff;
-    background: #ffcd38 ;
+    background: #ffcd38;
   }
   .portfolio #portfolio-flters li:last-child {
     margin-right: 0;
   }
   .portfolio .portfolio-wrap {
+    margin-top: 8px;
     transition: 0.3s;
     position: relative;
     overflow: hidden;
@@ -429,7 +374,7 @@ body {
     transition: 0.3s;
   }
   .portfolio .portfolio-wrap .portfolio-links a:hover {
-    color: #00cc95;
+    color: #ffcd38;
   }
   .portfolio .portfolio-wrap:hover::before {
     opacity: 1;
@@ -440,41 +385,7 @@ body {
   .portfolio .portfolio-wrap:hover .portfolio-info {
     opacity: 1;
   }
-
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 60px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-.about .content h3 {
-  font-weight: 500;
-  line-height: 32px;
-  font-size: 24px;
-}
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-.about .content ul li {
-  padding: 10px 0 0 28px;
-  position: relative;
-}
-.about .content ul i {
-  left: 0;
-  top: 7px;
-  position: absolute;
-  font-size: 20px;
-  color: #ffcd38;
-}
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-
+  
   /*--------------------------------------------------------------
   # Portfolio Details
   --------------------------------------------------------------*/
@@ -529,203 +440,3 @@ body {
     padding: 0;
   }
   
-  /*--------------------------------------------------------------
-  # Team
-  --------------------------------------------------------------*/
-  .team {
-    background: #fff;
-  }
-  .team .member {
-    position: relative;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  .team .member .pic {
-    overflow: hidden;
-    width: 150px;
-    border-radius: 50%;
-    margin: 0 auto 20px auto;
-  }
-  .team .member .pic img {
-    transition: ease-in-out 0.3s;
-  }
-  .team .member:hover img {
-    transform: scale(1.1);
-  }
-  .team .member h4 {
-    font-weight: 700;
-    margin-bottom: 5px;
-    font-size: 20px;
-    color: #36343a;
-  }
-  .team .member span {
-    display: block;
-    font-size: 15px;
-    padding-bottom: 10px;
-    position: relative;
-    font-weight: 500;
-  }
-  .team .member span::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 1px;
-    background: #b5b3ba;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .team .member p {
-    margin: 10px 0 0 0;
-    font-size: 14px;
-  }
-  .team .member .social {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .team .member .social a {
-    transition: ease-in-out 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    width: 32px;
-    height: 32px;
-    background: #a8a5ae;
-  }
-  .team .member .social a i {
-    color: #fff;
-    font-size: 16px;
-    margin: 0 2px;
-  }
-  .team .member .social a:hover {
-    background: #ffcd38 ;
-  }
-  .team .member .social a + a {
-    margin-left: 8px;
-  }
-  
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-  color: #444444;
-  font-size: 14px;
-  background: #f1f0f2;
-}
-#footer .footer-top {
-  padding: 60px 0 30px 0;
-  background: #f9f8f9;
-}
-#footer .footer-top .footer-contact {
-  margin-bottom: 30px;
-}
-#footer .footer-top .footer-contact h4 {
-  font-size: 22px;
-  margin: 0 0 30px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
-}
-#footer .footer-top .footer-contact p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
-  color: #777777;
-}
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #444444;
-  position: relative;
-  padding-bottom: 12px;
-}
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #ffcd38;
-  font-size: 18px;
-  line-height: 1;
-}
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-#footer .footer-top .footer-links ul a {
-  color: #777777;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-#footer .footer-top .footer-links ul a:hover {
-  text-decoration: none;
-  color: #ffcd38;
-}
-#footer .footer-newsletter {
-  font-size: 15px;
-}
-#footer .footer-newsletter h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #444444;
-  position: relative;
-  padding-bottom: 12px;
-}
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  text-align: left;
-  border: 1px solid #e4e3e6;
-}
-#footer .credits {
-  padding-top: 5px;
-  font-size: 13px;
-  color: #444444;
-}
-#footer .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #ffcd38;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-#footer .social-links a:hover {
-  background: #ffcd38;
-  color: #fff;
-  text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-# Sign in Sign Up
---------------------------------------------------------------*/
-
-.btn-signup, .btn-signin {
-    color: #fff;
-}
