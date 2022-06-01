@@ -1,16 +1,17 @@
 import DrawerInitiator from '../utils/drawer-initiator';
+import Explore from './pages/explore';
 
 class App {
   constructor({
-    button, drawer, content, hero, header,
+    button, drawer, content, hero, explore,
   }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
     this._hero = hero;
-    this._header = header;
+    this._explore = explore;
 
-    this._initialAppShell();
+    // this._initialAppShell();
   }
 
   _initialAppShell() {
@@ -22,17 +23,10 @@ class App {
     });
   }
 
-//   async renderPage() {
-//     const url = UrlParser.parseActiveUrlWithCombiner();
-//     const page = routes[url];
-//     this._content.innerHTML = await page.render();
-//     await page.afterRender();
-//     const skipLinkElement = document.querySelector('.skip-link');
-//     skipLinkElement.addEventListener('click', (event) => {
-//       event.preventDefault();
-//       document.querySelector('#content').focus();
-//     });
-//   }
+  async renderPage() {
+    this._explore.innerHTML = await Explore.render();
+    await Explore.afterRender('jakarta');
+  }
 }
 
 export default App;
