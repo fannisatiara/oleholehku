@@ -8,6 +8,7 @@ import {
   onValue,
 } from 'firebase/database';
 import { createOlehOlehTemplate } from '../templates/template-creator';
+import UrlParser from '../../routes/url-parser';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBr2Zs0pPCeRfaD30v7_YY5tdFlh2EHRAw',
@@ -74,10 +75,16 @@ const Explore = {
     `;
   },
 
-  async afterRender(city) {
+  async afterRender() {
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    let city = 'jakarta';
+    console.log(url.id);
+    if (url.id) {
+      city = url.id;
+    }
     const dbref = ref(getDatabase());
     await onValue(child(dbref, `oleholehku/${city}`), (snapshot) => {
-      const oleholehContainer = document.querySelector('.portfolio-item');
+      const oleholehContainer = document.querySelector('.portfolio-container');
       snapshot.forEach((childSnapshot) => {
         const childData = childSnapshot.val();
         console.log(childData);

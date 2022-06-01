@@ -6,6 +6,7 @@ import Signup from '../views/pages/signup';
 const routes = {
   '/': Home, // default page
   '/home': Home,
+  '/explore/:id': Explore,
   '/explore': Explore,
   '/signin': Signin,
   '/signup': Signup,
