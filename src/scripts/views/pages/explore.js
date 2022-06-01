@@ -5,7 +5,6 @@ import {
   getDatabase,
   ref,
   child,
-  get,
   onValue,
 } from 'firebase/database';
 import { createOlehOlehTemplate } from '../templates/template-creator';
@@ -27,9 +26,51 @@ const app = initializeApp(firebaseConfig);
 const Explore = {
   async render() {
     return `
-        <div class="col-lg-4 col-md-6 portfolio-item filter-jkt">
-            
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Explore Cities</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Explore</li>
+          </ol>
         </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Explore Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-jkt">Jakarta</li>
+                        <li data-filter=".filter-mdn">Madiun</li>
+                        <li data-filter=".filter-tasik">Tasikmalaya</li>
+                        <li data-filter=".filter-bdg">Bandung</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="search-container">
+                    <input placeholder="Search the city" class="form-control" type="search">                           
+                </div>
+                <div class="col-lg-2 d-flex justify-content-start">
+                    <div class="button-container">
+                        <button class="btn btn-warning" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+        </div>
+    </section><!-- End Explore Section -->
     `;
   },
 

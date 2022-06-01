@@ -1,17 +1,16 @@
 import DrawerInitiator from '../utils/drawer-initiator';
-import Explore from './pages/explore';
+import UrlParser from '../routes/url-parser';
+import routes from '../routes/routes';
 
 class App {
   constructor({
-    button, drawer, content, hero, explore,
+    button, drawer, content,
   }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
-    this._hero = hero;
-    this._explore = explore;
 
-    // this._initialAppShell();
+    this._initialAppShell();
   }
 
   _initialAppShell() {
@@ -24,8 +23,10 @@ class App {
   }
 
   async renderPage() {
-    this._explore.innerHTML = await Explore.render();
-    await Explore.afterRender('jakarta');
+    const url = UrlParser.parseActiveUrlWithCombiner();
+    const page = routes[url];
+    this._content.innerHTML = await page.render();
+    await page.afterRender();
   }
 }
 

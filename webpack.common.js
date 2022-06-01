@@ -34,18 +34,6 @@ module.exports = {
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
     }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/templates/signin.html'),
-      filename: 'signin.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/templates/signup.html'),
-      filename: 'signup.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/templates/explore.html'),
-      filename: 'explore.html',
-    }),
     new CopyWebpackPlugin({
       patterns: [
         {
