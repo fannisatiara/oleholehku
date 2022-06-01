@@ -20,7 +20,10 @@ const apps = new App({
 // addProfileImage.addNadiaImage();
 
 window.addEventListener('load', () => {
-  apps.renderPage();
+  if (document.location.pathname === '/explore.html') {
+    console.log(document.location.pathname);
+    apps.renderPage();
+  }
 });
 
 // getData('jakarta');
