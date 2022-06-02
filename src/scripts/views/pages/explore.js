@@ -51,6 +51,19 @@ const Explore = {
 
         </div>
     </section><!-- End Explore Section -->
+
+    <!-- ======= Recommendation Section ======= -->
+    <section id="recommendation" class="recommendation">
+      <div class="container">
+
+        <div class="text-center">
+          <h3>Do You Have Any Recommendation?</h3>
+          <p> Help this website to provide the best information about Indonesian souvenirs and foodies. </p>
+          <a class="recommendation-btn" href="#/recommendation">Lets Go!</a>
+        </div>
+
+      </div>
+    </section><!-- End Recommendation Section -->
     `;
   },
 
