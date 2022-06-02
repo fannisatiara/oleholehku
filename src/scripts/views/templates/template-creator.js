@@ -10,7 +10,6 @@ const createOlehOlehTemplate = (data) => `
                 <div class="portfolio-links">
                     <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="fas fa-plus"></i></a>
                     <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="far fa-thumbs-up"></i></a>
-                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="far fa-thumbs-down"></i></a>
                 </div>
             </div>
         </div>
