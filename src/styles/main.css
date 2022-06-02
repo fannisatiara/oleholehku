@@ -8,6 +8,10 @@ body {
     color: #444444;
   }
 
+  main {
+    min-height: 100vh;
+  }
+
   .skip-to-content {
     position: absolute;
     top: -40px;
