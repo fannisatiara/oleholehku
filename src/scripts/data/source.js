@@ -5,9 +5,9 @@ import {
   getDatabase,
   ref,
   child,
-  get,
   onValue,
 } from 'firebase/database';
+import { createOlehOlehTemplate } from '../views/templates/template-creator';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBr2Zs0pPCeRfaD30v7_YY5tdFlh2EHRAw',
@@ -23,36 +23,33 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const dbref = ref(getDatabase());
-
-// const getData = async (city) => {
-//   const data = await get(child(dbref, `oleholehku/${city}`)).then((snapshot) => {
-//     if (snapshot.exists()) {
-//       const items = snapshot.val();
-//       console.log(items);
-//       return items;
-//     }
-//     console.log('No data available');
-//   });
-//   console.log(data);
-//   data.array.forEach((element) => {
-//     console.log(element);
-//   });
-//   return data;
-// };
-
-const getData = async (city) => {
-  const data = await onValue(child(dbref, `oleholehku/${city}`), (snapshot) => {
-    snapshot.forEach((childSnapshot) => {
-      const childKey = childSnapshot.key;
-      const childData = childSnapshot.val();
-      console.log(childData);
-      const container = document.getElementById('team');
-      container.innerHTML += `<h1>${childData.name}</h1>`;
+class Source {
+  static async cityItemList(city) {
+    const dbref = ref(getDatabase());
+    await onValue(child(dbref, `oleholehku/${city}`), (snapshot) => {
+      const oleholehContainer = document.querySelector('.portfolio-container');
+      snapshot.forEach((childSnapshot) => {
+        const childData = childSnapshot.val();
+        oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
+      });
+    }, {
+      onlyOnce: true,
     });
-  }, {
-    onlyOnce: true,
-  });
-};
+  }
 
-export default getData;
+  static async allItemList() {
+    const dbref = ref(getDatabase());
+    await onValue(child(dbref, 'oleholehku/'), (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        const oleholehContainer = document.querySelector('.portfolio-container');
+        childSnapshot.forEach((grandchildSnapshot) => {
+          const data = grandchildSnapshot.val();
+          oleholehContainer.innerHTML += createOlehOlehTemplate(data);
+        });
+      });
+    }, {
+      onlyOnce: true,
+    });
+  }
+}
+export default Source;
