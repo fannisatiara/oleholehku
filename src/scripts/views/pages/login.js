@@ -1,4 +1,4 @@
-const Signin = {
+const Login = {
   async render() {
     return `
     <!-- ======= Breadcrumbs ======= -->
@@ -30,11 +30,11 @@ const Signin = {
                         </div>
 
                         <div class="col-md-12">
-                           <button class="btn btn-signin btn-warning float-end">Sign In</button>
+                           <button class="btn btn-login btn-warning float-end">Log In</button>
                         </div>
                     </div>
                 </form>
-                <p class="text-center mt-3 text-secondary">Don't have an account? <a href="signup.html">Sign Up</a></p>
+                <p class="text-center mt-3 text-secondary">Don't have an account? <a href="#/signup">Sign Up</a></p>
             </div>
         </div>
     </div>
@@ -47,4 +47,4 @@ const Signin = {
   },
 };
 
-export default Signin;
+export default Login;

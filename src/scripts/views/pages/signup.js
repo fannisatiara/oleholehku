@@ -41,7 +41,7 @@ const Signup = {
                         </div>
                     </div>
                 </form>
-                <p class="text-center mt-3 text-secondary">If you have an account, Please <a href="signin.html">Sign In Now</a></p>
+                <p class="text-center mt-3 text-secondary">If you have an account, Please <a href="#/login">Log In Now</a></p>
             </div>
         </div>
     </div>

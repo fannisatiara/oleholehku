@@ -1,6 +1,6 @@
 import Explore from '../views/pages/explore';
 import Home from '../views/pages/home';
-import Signin from '../views/pages/signin';
+import Login from '../views/pages/login';
 import Signup from '../views/pages/signup';
 
 const routes = {
@@ -8,7 +8,7 @@ const routes = {
   '/home': Home,
   '/explore/:id': Explore,
   '/explore': Explore,
-  '/signin': Signin,
+  '/login': Login,
   '/signup': Signup,
 };
 
