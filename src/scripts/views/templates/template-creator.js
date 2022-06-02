@@ -8,7 +8,9 @@ const createOlehOlehTemplate = (data) => `
                 <h4>${data.name}</h4>
                 <p>${data.desc}</p>
                 <div class="portfolio-links">
-                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="bx bx-plus"></i></a>
+                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="fas fa-plus"></i></a>
+                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="far fa-thumbs-up"></i></a>
+                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="far fa-thumbs-down"></i></a>
                 </div>
             </div>
         </div>
