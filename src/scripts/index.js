@@ -1,10 +1,13 @@
 import '../styles/main.css';
 import App from './views/app';
+import './utils/auth';
 
 const app = new App({
   button: document.querySelector('.button'),
   drawer: document.querySelector('#navbar'),
   content: document.querySelector('main'),
+  logout: document.querySelector('#logout'),
+
 });
 
 window.addEventListener('hashchange', () => {

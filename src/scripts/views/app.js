@@ -1,6 +1,7 @@
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
+import { LogoutInitiator } from '../utils/auth';
 
 class App {
   constructor({
@@ -9,6 +10,7 @@ class App {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
+    this._logout = logout;
 
     this._initialAppShell();
   }
@@ -19,6 +21,9 @@ class App {
       drawer: this._drawer,
       content: this._content,
       hero: this._hero,
+    });
+    LogoutInitiator.init({
+      logout: this._logout,
     });
   }
 
