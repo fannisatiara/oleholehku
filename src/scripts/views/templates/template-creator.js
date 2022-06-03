@@ -1,6 +1,6 @@
 const createOlehOlehTemplate = (data) => `
 
-    <div class="col-lg-4 col-md-6 portfolio-item filter-jkt">
+    <div class="col-lg-4 col-md-6 portfolio-item">
         <div class="portfolio-wrap">
             <img src="${data['img-url']}" title="${data.name}" tabindex="0">
             <div class="portfolio-info">

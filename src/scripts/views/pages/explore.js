@@ -39,7 +39,7 @@ const Explore = {
                 </div>
                 <div class="col-lg-2 d-flex justify-content-start">
                     <div class="button-container">
-                        <button class="btn btn-warning" type="button">Search</button>
+                        <button class="btn btn-signup btn-warning float-end">Search</button>
                     </div>
                 </div>
             </div>
