@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 import UrlParser from '../../routes/url-parser';
 import Source from '../../data/source';
 

@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-param-reassign */
-
 import '../styles/main.css';
 import App from './views/app';
 

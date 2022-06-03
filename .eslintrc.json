@@ -15,6 +15,11 @@
         "linebreak-style":"off",
         "import/no-extraneous-dependencies": "off",
         "no-underscore-dangle":"off",
-        "no-console":"off"
+        "no-console":"off",
+        "import/prefer-default-export": "off",
+        "no-unused-vars": "off",
+        "no-undef": "off",
+        "no-param-reassign": "off",
+        "consistent-return": "off"
     }
 }

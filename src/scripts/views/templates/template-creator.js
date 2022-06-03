@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 const createOlehOlehTemplate = (data) => `
 
     <div class="col-lg-4 col-md-6 portfolio-item filter-jkt">
