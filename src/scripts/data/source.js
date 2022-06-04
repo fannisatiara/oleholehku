@@ -5,6 +5,7 @@ import {
   child,
   onValue,
 } from 'firebase/database';
+import GLightbox from 'glightbox';
 import { createOlehOlehTemplate } from '../views/templates/template-creator';
 
 const firebaseConfig = {
@@ -30,6 +31,9 @@ class Source {
         const childData = childSnapshot.val();
         oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
       });
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+      });
     }, {
       onlyOnce: true,
     });
@@ -44,6 +48,9 @@ class Source {
           const data = grandchildSnapshot.val();
           oleholehContainer.innerHTML += createOlehOlehTemplate(data);
         });
+      });
+      const lightbox = GLightbox({
+        selector: '.glightbox',
       });
     }, {
       onlyOnce: true,

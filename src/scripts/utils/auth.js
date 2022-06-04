@@ -3,8 +3,6 @@ import {
   getAuth,
   onAuthStateChanged,
   GoogleAuthProvider,
-  signInWithPopup,
-  signOut,
 } from 'firebase/auth';
 import * as firebaseui from 'firebaseui';
 import 'firebaseui/dist/firebaseui.css';
@@ -133,6 +131,4 @@ function isUserSignedIn() {
   return !!getAuth().currentUser;
 }
 
-initFirebaseAuth();
-
-export { signinUI, LogoutInitiator };
+export { signinUI, LogoutInitiator, initFirebaseAuth };

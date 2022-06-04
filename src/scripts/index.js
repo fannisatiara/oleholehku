@@ -1,6 +1,6 @@
 import '../styles/main.css';
 import App from './views/app';
-import './utils/auth';
+import { initFirebaseAuth } from './utils/auth';
 
 const app = new App({
   button: document.querySelector('.button'),
@@ -9,6 +9,8 @@ const app = new App({
   logout: document.querySelector('#logout'),
 
 });
+
+initFirebaseAuth();
 
 window.addEventListener('hashchange', () => {
   app.renderPage();

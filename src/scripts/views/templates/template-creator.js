@@ -5,10 +5,15 @@ const createOlehOlehTemplate = (data) => `
             <img src="${data['img-url']}" title="${data.name}" tabindex="0">
             <div class="portfolio-info">
                 <h4>${data.name}</h4>
-                <p>${data.desc}</p>
+                <p>${data.city}</p>
                 <div class="portfolio-links">
-                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="fas fa-plus"></i></a>
-                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${data.name}"><i class="far fa-thumbs-up"></i></a>
+                    <a href="${data['img-url']}" 
+                    class="glightbox"
+                    data-type="image"
+                    data-title="${data.name}"
+                    data-description="${data.desc}"
+                    title="info"><i class="fas fa-plus"></i></a>
+                    <a href="${data['img-url']}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="upvote"><i class="far fa-thumbs-up"></i></a>
                 </div>
             </div>
         </div>
