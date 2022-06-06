@@ -1,4 +1,4 @@
-import { signinUI } from '../../utils/auth';
+import { signinUI } from '../../firebase/auth';
 
 const Login = {
   async render() {

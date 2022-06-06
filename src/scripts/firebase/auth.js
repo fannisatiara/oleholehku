@@ -5,18 +5,8 @@ import {
   GoogleAuthProvider,
 } from 'firebase/auth';
 import * as firebaseui from 'firebaseui';
+import firebaseConfig from './config';
 import 'firebaseui/dist/firebaseui.css';
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyBr2Zs0pPCeRfaD30v7_YY5tdFlh2EHRAw',
-  authDomain: 'oleh-olehku.firebaseapp.com',
-  databaseURL: 'https://oleh-olehku-default-rtdb.asia-southeast1.firebasedatabase.app',
-  projectId: 'oleh-olehku',
-  storageBucket: 'oleh-olehku.appspot.com',
-  messagingSenderId: '861250081340',
-  appId: '1:861250081340:web:dd6ebc4fe221c5c1fc2939',
-  measurementId: 'G-SVNKRXHKD3',
-};
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
@@ -25,18 +15,6 @@ const app = firebase.initializeApp(firebaseConfig);
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 const provider = new GoogleAuthProvider();
 const uiConfig = {
-  callbacks: {
-    signInSuccessWithAuthResult(authResult, redirectUrl) {
-      // User successfully signed in.
-      // Return type determines whether we continue the redirect automatically
-      // or whether we leave that to developer to handle.
-      return true;
-    },
-    uiShown() {
-      // The widget is rendered.
-      // Hide the loader.
-    },
-  },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
   signInSuccessUrl: '#/home',

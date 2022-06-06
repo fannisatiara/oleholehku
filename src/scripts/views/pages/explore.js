@@ -1,5 +1,5 @@
 import UrlParser from '../../routes/url-parser';
-import Source from '../../data/source';
+import Read from '../../firebase/read-database';
 
 const Explore = {
   async render() {
@@ -69,9 +69,9 @@ const Explore = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     if (url.id) {
       const city = url.id;
-      Source.cityItemList(city);
+      Read.cityItemList(city);
     } else {
-      Source.allItemList();
+      Read.allItemList();
     }
   },
 

@@ -1,7 +1,7 @@
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
-import { LogoutInitiator } from '../utils/auth';
+import { LogoutInitiator } from '../firebase/auth';
 
 class App {
   constructor({

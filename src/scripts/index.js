@@ -1,6 +1,6 @@
 import '../styles/main.css';
 import App from './views/app';
-import { initFirebaseAuth } from './utils/auth';
+import { initFirebaseAuth } from './firebase/auth';
 
 const app = new App({
   button: document.querySelector('.button'),
