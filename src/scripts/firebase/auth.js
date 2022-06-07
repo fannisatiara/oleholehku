@@ -24,32 +24,21 @@ const uiConfig = {
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
   ],
   // Terms of service url.
-  tosUrl: '<your-tos-url>',
+  tosUrl: '#/login',
   // Privacy policy url.
-  privacyPolicyUrl: '<your-privacy-policy-url>',
+  privacyPolicyUrl: '#/login',
 };
 
 function signinUI() {
   ui.start('#firebaseui-auth-container', uiConfig);
 }
 
-const LogoutInitiator = {
-  init({
-    logout,
-  }) {
-    logout.addEventListener('click', this.signOutUser);
-  },
-
-  signOutUser() {
-    console.log(firebase.auth().currentUser.displayName);
-    console.log(getAuth().currentUser.displayName);
-    // Sign out of Firebase.
-    firebase.auth().signOut()
-      .then(() => {
-        console.log('Signed Out');
-      });
-  },
-};
+function signOutUser() {
+  firebase.auth().signOut()
+    .then(() => {
+      console.log('Signed Out');
+    });
+}
 
 // const userPicElement = document.getElementById('user-pic');
 const userNameElement = document.getElementById('user-name');
@@ -109,4 +98,6 @@ function isUserSignedIn() {
   return !!getAuth().currentUser;
 }
 
-export { signinUI, LogoutInitiator, initFirebaseAuth };
+export {
+  signinUI, initFirebaseAuth, signOutUser,
+};
