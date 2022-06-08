@@ -18,9 +18,9 @@ const About = {
                         Website Oleholehku mempunyai fitur utama sebagai berikut :
                     </p>
                     <ul>
-                        <li><i class="fas fa-check-square"></i> Mencari informasi oleh-oleh menurut daerahnya.</li>
-                        <li><i class="fas fa-check-square"></i> Memberikan rekomendasi oleh-oleh.</li>
-                        <li><i class="fas fa-check-square"></i> Memberikan vote untuk rekomendasi terbaik di suatu daerah.</li>
+                        <li><i class="fas fa-check-square"></i> Mencari <a href="#/explore/">informasi</a> oleh-oleh menurut daerahnya.</li>
+                        <li><i class="fas fa-check-square"></i> Memberikan <a href="#/recommendation/">rekomendasi</a> oleh-oleh.</li>
+                        <li><i class="fas fa-check-square"></i> Memberikan <a href="#/explore/">vote</a> untuk rekomendasi terbaik di suatu daerah.</li>
                     </ul>
                 </div>
             </div>
