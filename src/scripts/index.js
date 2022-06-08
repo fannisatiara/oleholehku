@@ -1,3 +1,7 @@
+import '../styles/home.css';
+import '../styles/about.css';
+import '../styles/login.css';
+import '../styles/explore.css';
 import '../styles/main.css';
 import App from './views/app';
 import { initFirebaseAuth } from './firebase/auth';
