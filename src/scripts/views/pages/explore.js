@@ -1,5 +1,7 @@
+import snackbar from 'node-snackbar';
 import UrlParser from '../../routes/url-parser';
 import Read from '../../firebase/read-database';
+import { isUserSignedIn } from '../../firebase/auth';
 
 const Explore = {
   async render() {
@@ -73,6 +75,22 @@ const Explore = {
     } else {
       Read.allItemList();
     }
+    const recommendationButton = document.querySelector('.recommendation-btn');
+    recommendationButton.addEventListener('click', (e) => {
+      if (!isUserSignedIn()) {
+        e.preventDefault();
+        snackbar.show({
+          text: 'You must log-in first',
+          pos: 'top-center',
+          backgroundColor: '#ffcd38',
+          textColor: 'black',
+          actionTextColor: 'black',
+          actionText: '<i class="fa-solid fa-xmark"></i>',
+          duration: 3000,
+          customClass: 'customSnackbar',
+        });
+      }
+    });
   },
 
 };

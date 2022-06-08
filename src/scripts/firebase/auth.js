@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
 } from 'firebase/auth';
 import * as firebaseui from 'firebaseui';
+import snackbar from 'node-snackbar';
 import firebaseConfig from './config';
 import 'firebaseui/dist/firebaseui.css';
 
@@ -36,7 +37,16 @@ function signinUI() {
 function signOutUser() {
   firebase.auth().signOut()
     .then(() => {
-      console.log('Signed Out');
+      snackbar.show({
+        text: 'Log-out successful!',
+        pos: 'top-center',
+        backgroundColor: '#ffcd38',
+        textColor: 'black',
+        actionTextColor: 'black',
+        actionText: '<i class="fa-solid fa-xmark"></i>',
+        duration: 3000,
+        customClass: 'customSnackbar',
+      });
     });
 }
 
@@ -99,5 +109,5 @@ function isUserSignedIn() {
 }
 
 export {
-  signinUI, initFirebaseAuth, signOutUser,
+  signinUI, initFirebaseAuth, signOutUser, isUserSignedIn,
 };

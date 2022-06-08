@@ -7,7 +7,7 @@ import {
 class Write {
   static async itemRecommendation(name, desc, city, imgURL) {
     const db = getDatabase();
-    set(ref(db, `recommendation/${city}`), {
+    set(ref(db, `recommendation/${city}/${name}`), {
       name,
       desc,
       city,

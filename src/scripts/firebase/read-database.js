@@ -32,8 +32,8 @@ class Read {
   static async allItemList() {
     const dbref = ref(getDatabase());
     await onValue(child(dbref, 'oleholehku/'), (snapshot) => {
+      const oleholehContainer = document.querySelector('.portfolio-container');
       snapshot.forEach((childSnapshot) => {
-        const oleholehContainer = document.querySelector('.portfolio-container');
         childSnapshot.forEach((grandchildSnapshot) => {
           const data = grandchildSnapshot.val();
           oleholehContainer.innerHTML += createOlehOlehTemplate(data);

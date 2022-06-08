@@ -158,3 +158,13 @@
     background: #ffcd38;
     border: 2px solid #ffcd38;
   }
+
+  #loading {
+    max-width: 35%;
+    max-height: 28%;
+    display: inline;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    position: relative;
+  }

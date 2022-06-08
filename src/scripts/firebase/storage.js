@@ -21,8 +21,8 @@ async function saveImage(file) {
     const fileSnapshot = await uploadBytesResumable(newImageRef, file);
 
     // 3 - Generate a public URL for the file.
-    const publicImageUrl = await getDownloadURL(newImageRef);
-    console.log(publicImageUrl);
+    // const publicImageUrl = await getDownloadURL(newImageRef);
+    // console.log(publicImageUrl);
 
     // 4 - Update the chat message placeholder with the image's URL.
     // await updateDoc(messageRef,{
@@ -41,12 +41,11 @@ async function getImageURL(file) {
 
   // 3 - Generate a public URL for the file.
   const publicImageUrl = await getDownloadURL(newImageRef);
-  console.log(publicImageUrl);
   return publicImageUrl;
 }
 
 // Triggered when a file is selected via the media picker.
-function onMediaFileSelected(event) {
+async function onMediaFileSelected(event) {
   event.preventDefault();
   const file = event.target.files[0];
 
@@ -54,16 +53,16 @@ function onMediaFileSelected(event) {
   //   imageFormElement.reset();
 
   // Check if the file is an image.
-  if (!file.type.match('image.*')) {
-    const data = {
-      message: 'You can only share images',
-      timeout: 2000,
-    };
-    signInSnackbarElement.MaterialSnackbar.showSnackbar(data);
-    return;
-  }
+  // if (!file.type.match('image.*')) {
+  //   const data = {
+  //     message: 'You can only share images',
+  //     timeout: 2000,
+  //   };
+  //   signInSnackbarElement.MaterialSnackbar.showSnackbar(data);
+  //   return;
+  // }
   // Check if the user is signed-in
-  saveImage(file).then(console.log(' image uploaded!'));
+  await saveImage(file);
 }
 
 export { onMediaFileSelected, getImageURL };
