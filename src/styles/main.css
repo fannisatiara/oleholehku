@@ -138,10 +138,26 @@ body {
   .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
     color: #ffcd38 ;
   }
+  .navbar #user-name {
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #ffcd38;
+    border-radius: 50px;
+    padding: 8px 12px;
+   }
+   .navbar .user-name:hover {
+     color: #fff;
+     background: #ffcd38;
+     border-radius: 50px;
+   }
+   .navbar .user-name {
+     margin-left: 36px;
+   }
   .navbar .getstarted, .navbar .getstarted:focus {
     background: #ffcd38 ;
     padding: 10px 25px;
-    margin-left: 30px;
+    margin-left: 4px;
     margin-right: 15px;
     border-radius: 50px;
     color: #fff;
@@ -207,8 +223,14 @@ body {
     }
     #header .logo {
       margin: 0;
-
     }    
+    .navbar #user-name {
+      padding: 10px;
+      margin: 0 4px 4px 0;
+    }
+    .navbar .user-name {
+      margin-left: 0;
+    }
   }
   @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
