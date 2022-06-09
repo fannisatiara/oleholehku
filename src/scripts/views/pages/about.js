@@ -1,4 +1,6 @@
+import snackbar from 'node-snackbar';
 import addProfileImage from '../../utils/profile-image';
+import { isUserSignedIn } from '../../firebase/auth';
 
 const About = {
   async render() {
@@ -19,7 +21,7 @@ const About = {
                     </p>
                     <ul>
                         <li><i class="fas fa-check-square"></i> Mencari <a href="#/explore/">informasi</a> oleh-oleh menurut daerahnya.</li>
-                        <li><i class="fas fa-check-square"></i> Memberikan <a href="#/recommendation/">rekomendasi</a> oleh-oleh.</li>
+                        <li class="recom-link"><i class="fas fa-check-square"></i> Memberikan <a href="#/recommendation/">rekomendasi</a> oleh-oleh.</li>
                         <li><i class="fas fa-check-square"></i> Memberikan <a href="#/explore/">vote</a> untuk rekomendasi terbaik di suatu daerah.</li>
                     </ul>
                 </div>
@@ -106,6 +108,22 @@ const About = {
     addProfileImage.addFannisaImage();
     addProfileImage.addYogaImage();
     addProfileImage.addNadiaImage();
+    const recommendationLink = document.querySelector('.recom-link');
+    recommendationLink.addEventListener('click', (e) => {
+      if (!isUserSignedIn()) {
+        e.preventDefault();
+        snackbar.show({
+          text: 'You must log-in first',
+          pos: 'top-center',
+          backgroundColor: '#ffcd38',
+          textColor: 'black',
+          actionTextColor: 'black',
+          actionText: '<i class="fa-solid fa-xmark"></i>',
+          duration: 3000,
+          customClass: 'customSnackbar',
+        });
+      }
+    });
   },
 };
 
