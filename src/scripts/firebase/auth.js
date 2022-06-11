@@ -25,9 +25,9 @@ const uiConfig = {
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
   ],
   // Terms of service url.
-  tosUrl: '#/login',
+  tosUrl: '#/signin',
   // Privacy policy url.
-  privacyPolicyUrl: '#/login',
+  privacyPolicyUrl: '#/signin',
 };
 
 function signinUI() {
@@ -52,7 +52,7 @@ function signOutUser() {
 
 // const userPicElement = document.getElementById('user-pic');
 const userNameElement = document.getElementById('user-name');
-const signInButtonElement = document.getElementById('login');
+const signInButtonElement = document.getElementById('signin');
 const signOutButtonElement = document.getElementById('logout');
 // const signInSnackbarElement = document.getElementById('must-signin-snackbar');
 

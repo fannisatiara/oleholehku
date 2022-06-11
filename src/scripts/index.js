@@ -1,6 +1,6 @@
 import '../styles/home.css';
 import '../styles/about.css';
-import '../styles/login.css';
+import '../styles/signin.css';
 import '../styles/explore.css';
 import '../styles/main.css';
 import 'node-snackbar/dist/snackbar.min.css';

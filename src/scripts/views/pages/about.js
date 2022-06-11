@@ -113,7 +113,7 @@ const About = {
       if (!isUserSignedIn()) {
         e.preventDefault();
         snackbar.show({
-          text: 'You must log-in first',
+          text: 'You must sign in first',
           pos: 'top-center',
           backgroundColor: '#ffcd38',
           textColor: 'black',
