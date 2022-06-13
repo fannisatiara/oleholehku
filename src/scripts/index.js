@@ -6,6 +6,7 @@ import '../styles/main.css';
 import 'node-snackbar/dist/snackbar.min.css';
 import App from './views/app';
 import { initFirebaseAuth } from './firebase/auth';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   button: document.querySelector('.button'),
@@ -23,6 +24,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
 
 // getData('jakarta');

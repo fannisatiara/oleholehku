@@ -1,0 +1,17 @@
+{
+    "name": "Oleholehku",
+    "short_name": "Oleholehku",
+    "description": "Explore The Uniqueness Of Indonesia",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "/icons/favicon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }
