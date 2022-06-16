@@ -15,7 +15,7 @@ const app = initializeApp(firebaseConfig);
 class Read {
   static async cityItemList(city) {
     const dbref = ref(getDatabase());
-    await onValue(child(dbref, `oleholehku/${city}`), (snapshot) => {
+    await onValue(child(dbref, `Oleholehku/${city}`), (snapshot) => {
       const oleholehContainer = document.querySelector('.portfolio-container');
       snapshot.forEach((childSnapshot) => {
         const childData = childSnapshot.val();
@@ -31,7 +31,7 @@ class Read {
 
   static async allItemList() {
     const dbref = ref(getDatabase());
-    await onValue(child(dbref, 'oleholehku/'), (snapshot) => {
+    await onValue(child(dbref, 'Oleholehku/'), (snapshot) => {
       const oleholehContainer = document.querySelector('.portfolio-container');
       snapshot.forEach((childSnapshot) => {
         childSnapshot.forEach((grandchildSnapshot) => {

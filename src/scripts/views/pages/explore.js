@@ -28,10 +28,10 @@ const Explore = {
                 <div class="col-lg-7 d-flex justify-content-center">
                     <ul id="portfolio-flters">
                         <li> <a href="#/explore/">All</a></li>
-                        <li> <a href="#/explore/jakarta">Jakarta</a></li>
-                        <li> <a href="#/explore/madiun">Madiun</a></li>
-                        <li> <a href="#/explore/tasikmalaya">Tasikmalaya</a></li>
-                        <li> <a href="#/explore/bandung">Bandung</a></li>
+                        <li> <a href="#/explore/Jakarta">Jakarta</a></li>
+                        <li> <a href="#/explore/Madiun">Madiun</a></li>
+                        <li> <a href="#/explore/Tasikmalaya">Tasikmalaya</a></li>
+                        <li> <a href="#/explore/Bandung">Bandung</a></li>
                     </ul>
                 </div>
 
@@ -71,6 +71,7 @@ const Explore = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     if (url.id) {
       const city = url.id;
+      console.log(city);
       Read.cityItemList(city);
     } else {
       Read.allItemList();
