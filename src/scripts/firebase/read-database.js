@@ -23,6 +23,14 @@ class Read {
     const data = await get(child(dbref, 'Oleholehku/'));
     return data;
   }
+
+  static async getItemCount(city, id) {
+    const dbref = ref(getDatabase());
+    await onValue(child(dbref, `Oleholehku/${city}/${id}/upvote/count`), (snapshot) => {
+      const countContainer = document.getElementById(`count-${id}`);
+      countContainer.innerHTML = `<p>${snapshot.val()}</p>`;
+    });
+  }
 }
 
 export default Read;

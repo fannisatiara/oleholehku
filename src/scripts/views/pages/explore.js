@@ -80,6 +80,7 @@ const Explore = {
           oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
           const upvoteContainer = document.querySelector(`#upvote-${childData.id}`);
           upvoteContainer.innerHTML = createUpvoteButton(childData);
+          Read.getItemCount(childData.city, childData.id);
         });
         const lightbox = GLightbox({
           selector: '.glightbox',
@@ -94,6 +95,7 @@ const Explore = {
             oleholehContainer.innerHTML += createOlehOlehTemplate(data);
             const upvoteContainer = document.querySelector(`#upvote-${data.id}`);
             upvoteContainer.innerHTML = createUpvoteButton(data);
+            Read.getItemCount(data.city, data.id);
           });
         });
         const lightbox = GLightbox({

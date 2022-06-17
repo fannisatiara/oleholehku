@@ -18,8 +18,8 @@ const createOlehOlehTemplate = (data) => `
                     <div id="upvote-${data.id}" class="col">
                         
                     </div>
-                    <div class="col align-self-center">
-                        <p>${data.upvote.count}</p>
+                    <div id="count-${data.id}" class="col align-self-center">
+                    
                     </div>
                 </div>
             </div>

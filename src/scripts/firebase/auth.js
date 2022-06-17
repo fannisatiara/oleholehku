@@ -66,6 +66,10 @@ function getUserName() {
   return getAuth().currentUser.displayName;
 }
 
+function getUserID() {
+  return getAuth().currentUser.uid;
+}
+
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
 function authStateObserver(user) {
   if (user) {
@@ -109,5 +113,5 @@ function isUserSignedIn() {
 }
 
 export {
-  signinUI, initFirebaseAuth, signOutUser, isUserSignedIn,
+  signinUI, initFirebaseAuth, signOutUser, isUserSignedIn, getUserID,
 };

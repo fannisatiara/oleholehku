@@ -6,7 +6,9 @@ import '../styles/main.css';
 import 'node-snackbar/dist/snackbar.min.css';
 import App from './views/app';
 import { initFirebaseAuth } from './firebase/auth';
-import swRegister from './utils/sw-register';
+// import swRegister from './utils/sw-register';
+import Write from './firebase/write-database';
+import Read from './firebase/read-database';
 
 const app = new App({
   button: document.querySelector('.button'),
@@ -17,6 +19,11 @@ const app = new App({
 });
 
 initFirebaseAuth();
+// Write.addUpvoteCount('Tasikmalaya', 10310);
+
+// Write.addUpvoteCount('Tasikmalaya', 10310);
+// Read.getItemCount('Tasikmalaya', 10310);
+// Read.getItemCount('Tasikmalaya', 10310).then((data) => console.log(data));
 
 window.addEventListener('hashchange', () => {
   window.scrollTo(0, 0);
@@ -25,7 +32,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
-  swRegister();
+  // swRegister();
 });
 
 // getData('jakarta');
