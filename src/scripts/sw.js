@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 self.addEventListener('install', (event) => {
   console.log('Installing Service Worker ...');
 
@@ -11,7 +12,7 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  console.log(event.request);
+  // console.log(event.request);
 
   event.respondWith(fetch(event.request));
   // TODO: Add/get fetch request to/from caches

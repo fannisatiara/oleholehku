@@ -4,9 +4,8 @@ import {
   ref,
   child,
   onValue,
+  get,
 } from 'firebase/database';
-import GLightbox from 'glightbox';
-import { createOlehOlehTemplate } from '../views/templates/template-creator';
 import firebaseConfig from './config';
 
 // Initialize Firebase
@@ -15,36 +14,14 @@ const app = initializeApp(firebaseConfig);
 class Read {
   static async cityItemList(city) {
     const dbref = ref(getDatabase());
-    await onValue(child(dbref, `Oleholehku/${city}`), (snapshot) => {
-      const oleholehContainer = document.querySelector('.portfolio-container');
-      snapshot.forEach((childSnapshot) => {
-        const childData = childSnapshot.val();
-        oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
-      });
-      const lightbox = GLightbox({
-        selector: '.glightbox',
-      });
-    }, {
-      onlyOnce: true,
-    });
+    const data = await get(child(dbref, `Oleholehku/${city}`));
+    return data;
   }
 
   static async allItemList() {
     const dbref = ref(getDatabase());
-    await onValue(child(dbref, 'Oleholehku/'), (snapshot) => {
-      const oleholehContainer = document.querySelector('.portfolio-container');
-      snapshot.forEach((childSnapshot) => {
-        childSnapshot.forEach((grandchildSnapshot) => {
-          const data = grandchildSnapshot.val();
-          oleholehContainer.innerHTML += createOlehOlehTemplate(data);
-        });
-      });
-      const lightbox = GLightbox({
-        selector: '.glightbox',
-      });
-    }, {
-      onlyOnce: true,
-    });
+    const data = await get(child(dbref, 'Oleholehku/'));
+    return data;
   }
 }
 

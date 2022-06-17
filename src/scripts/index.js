@@ -17,7 +17,6 @@ const app = new App({
 });
 
 initFirebaseAuth();
-const main = document.querySelector('main');
 
 window.addEventListener('hashchange', () => {
   window.scrollTo(0, 0);

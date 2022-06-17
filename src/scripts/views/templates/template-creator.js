@@ -15,8 +15,8 @@ const createOlehOlehTemplate = (data) => `
                     data-description="${data.desc}"
                     title="info"><i class="fas fa-plus"></i></a>
                     </div>
-                    <div class="col">
-                        <a data-gallery="portfolioGallery" class="portfolio-lightbox" title="upvote"><i class="far fa-thumbs-up"></i></a>
+                    <div id="upvote-${data.id}" class="col">
+                        
                     </div>
                     <div class="col align-self-center">
                         <p>${data.upvote.count}</p>
@@ -27,6 +27,14 @@ const createOlehOlehTemplate = (data) => `
     </div>
 `;
 
+const createUpvoteButton = (data) => `
+    <a data-id="${data.id}" class="portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
+`;
+
+const createUpvotedButton = (data) => `
+    <a data-id="${data.id}" class="portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
+`;
+
 export {
-  createOlehOlehTemplate,
+  createOlehOlehTemplate, createUpvoteButton, createUpvotedButton,
 };

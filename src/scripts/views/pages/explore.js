@@ -1,4 +1,6 @@
 import snackbar from 'node-snackbar';
+import GLightbox from 'glightbox';
+import { createOlehOlehTemplate, createUpvoteButton, createUpvotedButton } from '../templates/template-creator';
 import UrlParser from '../../routes/url-parser';
 import Read from '../../firebase/read-database';
 import { isUserSignedIn } from '../../firebase/auth';
@@ -71,10 +73,33 @@ const Explore = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     if (url.id) {
       const city = url.id;
-      console.log(city);
-      Read.cityItemList(city);
+      Read.cityItemList(city).then((snapshot) => {
+        const oleholehContainer = document.querySelector('.portfolio-container');
+        snapshot.forEach((childSnapshot) => {
+          const childData = childSnapshot.val();
+          oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
+          const upvoteContainer = document.querySelector(`#upvote-${childData.id}`);
+          upvoteContainer.innerHTML = createUpvoteButton(childData);
+        });
+        const lightbox = GLightbox({
+          selector: '.glightbox',
+        });
+      });
     } else {
-      Read.allItemList();
+      Read.allItemList().then((snapshot) => {
+        const oleholehContainer = document.querySelector('.portfolio-container');
+        snapshot.forEach((childSnapshot) => {
+          childSnapshot.forEach((grandchildSnapshot) => {
+            const data = grandchildSnapshot.val();
+            oleholehContainer.innerHTML += createOlehOlehTemplate(data);
+            const upvoteContainer = document.querySelector(`#upvote-${data.id}`);
+            upvoteContainer.innerHTML = createUpvoteButton(data);
+          });
+        });
+        const lightbox = GLightbox({
+          selector: '.glightbox',
+        });
+      });
     }
     const recommendationButton = document.querySelector('.recommendation-btn');
     recommendationButton.addEventListener('click', (e) => {
