@@ -10,7 +10,7 @@ const Recommendation = {
         <div class="container">
   
           <div class="d-flex justify-content-center align-items-center">
-            <h2>Input Recommendation</h2>
+            <h2>Input Rekomendasi</h2>
           </div>
   
         </div>

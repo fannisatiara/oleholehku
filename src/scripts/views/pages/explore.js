@@ -13,10 +13,10 @@ const Explore = {
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Explore Cities</h2>
+          <h2>Jelajahi Kota</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Explore</li>
+            <li><a href="index.html">Beranda</a></li>
+            <li>Jelajahi</li>
           </ol>
         </div>
 
@@ -39,11 +39,11 @@ const Explore = {
 
                 <div class="col-lg-3 d-flex justify-content-center">
                     <div class="search-container">
-                    <input placeholder="Search the city" class="form-control" type="search">                           
+                    <input placeholder="Masukkan kota" class="form-control" type="search">                           
                 </div>
                 <div class="col-lg-2 d-flex justify-content-start">
                     <div class="button-container">
-                        <button class="btn btn-signup btn-warning float-end">Search</button>
+                        <button class="btn btn-signup btn-warning float-end">Cari</button>
                     </div>
                 </div>
             </div>
@@ -59,9 +59,9 @@ const Explore = {
       <div class="container">
 
         <div class="text-center">
-          <h3>Do You Have Any Recommendation?</h3>
-          <p> Help this website to provide the best information about Indonesian souvenirs and foodies. </p>
-          <a class="recommendation-btn" href="#/recommendation">Lets Go!</a>
+          <h3>Punya Rekomendasi Oleh-Oleh dari Daerahmu?</h3>
+          <p> Bantu kami untuk menyajikan informasi terbaik seputar oleh-oleh khas Indonesia. </p>
+          <a class="recommendation-btn" href="#/recommendation">Ayo!</a>
         </div>
 
       </div>
@@ -108,7 +108,7 @@ const Explore = {
       if (!isUserSignedIn()) {
         e.preventDefault();
         snackbar.show({
-          text: 'You must log-in first',
+          text: 'You must sign in first',
           pos: 'top-center',
           backgroundColor: '#ffcd38',
           textColor: 'black',
