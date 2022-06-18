@@ -29,11 +29,11 @@ const Explore = {
             <div class="row">
                 <div class="col-lg-7 d-flex justify-content-center">
                     <ul id="portfolio-flters">
-                        <li> <a href="#/explore/">All</a></li>
-                        <li> <a href="#/explore/Jakarta">Jakarta</a></li>
-                        <li> <a href="#/explore/Madiun">Madiun</a></li>
-                        <li> <a href="#/explore/Tasikmalaya">Tasikmalaya</a></li>
-                        <li> <a href="#/explore/Bandung">Bandung</a></li>
+                        <li class="filter active"> <a href="#/explore/">All</a></li>
+                        <li class="filter"> <a href="#/explore/Jakarta">Jakarta</a></li>
+                        <li class="filter"> <a href="#/explore/Madiun">Madiun</a></li>
+                        <li class="filter"> <a href="#/explore/Tasikmalaya">Tasikmalaya</a></li>
+                        <li class="filter"> <a href="#/explore/Bandung">Bandung</a></li>
                     </ul>
                 </div>
 
@@ -119,6 +119,16 @@ const Explore = {
         });
       }
     });
+    // highlight filter city
+    const filtersContainer = document.getElementById('portfolio-flters');
+    const filters = filtersContainer.getElementsByClassName('filter');
+    for (let i = 0; i < filters.length; i++) {
+      filters[i].addEventListener('click', function () {
+        const current = document.getElementsByClassName('active');
+        current[1].className = current[1].className.replace(' active', '');
+        this.className += ' active';
+      });
+    }
   },
 
 };
