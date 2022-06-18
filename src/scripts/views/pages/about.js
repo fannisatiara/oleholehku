@@ -11,7 +11,7 @@ const About = {
         <div class="container">
             <div class="row content">
                     <div class="section-title">
-                        <h2>About Oleholehku</h2>
+                        <h2>Tentang Oleholehku</h2>
                     </div>
                 <div>
                     <p>
@@ -47,8 +47,8 @@ const About = {
                             <h4>Royan</h4>
                             <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                             <div class="social">
-                                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/royanagist/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/royan-agist-ramadhan-33938919a/"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -61,8 +61,8 @@ const About = {
                             <h4>Fannisa</h4>
                             <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                             <div class="social">
-                                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/fannisatiara_/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/fannisa-tiara-salsabila-901048231/"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -75,8 +75,8 @@ const About = {
                             <h4>Yoga</h4>
                             <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                             <div class="social">
-                                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/yogaanggoroo/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/firdaus-yoga-anggoro-b2136721b/"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -87,10 +87,10 @@ const About = {
                         <div class="pic"><img id="nadia" class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Nadia</h4>
-                            <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                            <p>"Setiap akhir adalah awal dari sesuatu yang baru"</p>
                             <div class="social">
-                                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/nadianuraaa/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/nadianura/"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>

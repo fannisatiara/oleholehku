@@ -65,7 +65,7 @@ const UpvoteButtonInitiator = {
     const upvoteButton = document.querySelector(`#button-${this._data.id}`);
     upvoteButton.addEventListener('click', async () => {
       Snackbar.show({
-        text: 'You must log-in first',
+        text: 'You must sign in first',
         pos: 'top-center',
         backgroundColor: '#ffcd38',
         textColor: 'black',

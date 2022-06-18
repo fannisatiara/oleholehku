@@ -38,9 +38,8 @@
     border-radius: 50px;
     font-family: "Poppins", sans-serif;
   }
-  .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-    color: #fff;
-    background: #ffcd38 ;
+  .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters .active, .portfolio #portfolio-flters .active:focus {
+    background: #ffcd38;
   }
   .portfolio #portfolio-flters li:last-child {
     margin-right: 0;
