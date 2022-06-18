@@ -28,11 +28,11 @@ const createOlehOlehTemplate = (data) => `
 `;
 
 const createUpvoteButton = (data) => `
-    <a data-id="${data.id}" class="portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
+    <a id="button-${data.id}" data-id="${data.id}" class="portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
 `;
 
 const createUpvotedButton = (data) => `
-    <a data-id="${data.id}" class="portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
+    <a id="button-${data.id}" data-id="${data.id}" class="portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
 `;
 
 export {

@@ -4,6 +4,7 @@ import { createOlehOlehTemplate, createUpvoteButton, createUpvotedButton } from 
 import UrlParser from '../../routes/url-parser';
 import Read from '../../firebase/read-database';
 import { isUserSignedIn } from '../../firebase/auth';
+import UpvoteButtonInitiator from '../../utils/upvote-initiator';
 
 const Explore = {
   async render() {
@@ -79,7 +80,11 @@ const Explore = {
           const childData = childSnapshot.val();
           oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
           const upvoteContainer = document.querySelector(`#upvote-${childData.id}`);
-          upvoteContainer.innerHTML = createUpvoteButton(childData);
+          // upvoteContainer.innerHTML = createUpvoteButton(childData);
+          UpvoteButtonInitiator.init({
+            upvoteButtonContainer: upvoteContainer,
+            data: childData,
+          });
           Read.getItemCount(childData.city, childData.id);
         });
         const lightbox = GLightbox({

@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable guard-for-in */
 import Snackbar from 'node-snackbar';
 import { createUpvoteButton, createUpvotedButton } from '../views/templates/template-creator';
 import { isUserSignedIn, getUserID } from '../firebase/auth';
@@ -7,23 +9,22 @@ const UpvoteButtonInitiator = {
   async init({ upvoteButtonContainer, data }) {
     this._upvoteButtonContainer = upvoteButtonContainer;
     this._data = data;
-    console.log(`UpvoteButtonInitiator-${data.name} `);
+    // console.log(`UpvoteButtonInitiator-${data.name} `);
     await this._renderButton();
   },
 
   async _renderButton() {
     const dataUID = this._data.upvote.uid;
-    // console.log(`render button ${this._data.name}`);
 
     if (isUserSignedIn()) {
-      const uid = getUserUID();
+      const uid = getUserID();
       let upvoted = false;
-      dataUID.forEach((target) => {
-        // console.log(target.uid);
-        if (uid === target.uid) {
+      for (const item in dataUID) {
+        // console.log(item);
+        if (uid === item) {
           upvoted = true;
         }
-      });
+      }
       if (upvoted) {
         this._renderUpvoted();
       } else {
@@ -35,35 +36,33 @@ const UpvoteButtonInitiator = {
   },
 
   _renderUpvote() {
-    console.log(`render upvote ${this._data.name}`);
-    this._upvoteButtonContainer.innerHTML = createUpvoteButtonTemplate(this._data);
+    this._upvoteButtonContainer.innerHTML = createUpvoteButton(this._data);
 
-    const upvoteButton = document.querySelector(`.${this._data.name}`);
+    const upvoteButton = document.querySelector(`#button-${this._data.id}`);
     upvoteButton.addEventListener('click', async () => {
-      Write.addUpvoteCount(this._data.city, this._data.name);
-      // Write.addUpvoteUID(this._data.city, this._data.name, getUserUID()).then(() => {
-      //   this._renderButton();
-      // });
+      Write.addUpvoteCount(this._data.city, this._data.id);
+      Write.addUpvoteUID(this._data.city, this._data.id, getUserID()).then(() => {
+        this._renderButton();
+      });
     });
   },
 
   _renderUpvoted() {
-    console.log(`render upvoted ${this._data.name}`);
-    this._upvoteButtonContainer.innerHTML = createUpvotedButtonTemplate(this._data);
+    this._upvoteButtonContainer.innerHTML = createUpvotedButton(this._data);
 
-    const upvoteButton = document.querySelector(`.${this._data.name}`);
+    const upvoteButton = document.querySelector(`#button-${this._data.id}`);
     upvoteButton.addEventListener('click', async () => {
-      Write.subtractUpvoteCount(this._data.city, this._data.name);
-      // Write.removeUpvoteUID(this._data.city, this._data.name, getUserUID()).then(() => {
-      //   this._renderButton();
-      // });
+      Write.subtractUpvoteCount(this._data.city, this._data.id);
+      Write.removeUpvoteUID(this._data.city, this._data.id, getUserID()).then(() => {
+        this._renderButton();
+      });
     });
   },
 
   _renderNewUpvote() {
-    this._upvoteButtonContainer.innerHTML = createUpvoteButtonTemplate(this._data);
+    this._upvoteButtonContainer.innerHTML = createUpvoteButton(this._data);
 
-    const upvoteButton = document.querySelector(`.${this._data.name}`);
+    const upvoteButton = document.querySelector(`#button-${this._data.id}`);
     upvoteButton.addEventListener('click', async () => {
       Snackbar.show({
         text: 'You must log-in first',
