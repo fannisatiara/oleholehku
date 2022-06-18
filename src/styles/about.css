@@ -61,10 +61,18 @@
     transform: scale(1.1);
   }
   .team .member h4 {
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
     color: #36343a;
+  }
+  .team .member .role {
+    color: grey;
+    font-size: 15px;
+  }
+  .team .member .quotes {
+    font-size: 15px;
   }
   .team .member span {
     display: block;
