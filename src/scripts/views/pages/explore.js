@@ -3,12 +3,13 @@ import GLightbox from 'glightbox';
 import { createOlehOlehTemplate, createUpvoteButton, createUpvotedButton } from '../templates/template-creator';
 import UrlParser from '../../routes/url-parser';
 import Read from '../../firebase/read-database';
-import { isUserSignedIn } from '../../firebase/auth';
+import { isUserSignedIn, getUserID } from '../../firebase/auth';
+import Write from '../../firebase/write-database';
 import UpvoteButtonInitiator from '../../utils/upvote-initiator';
 
 const Explore = {
   async render() {
-    return `
+    return /* html */`
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
       <div class="container">
@@ -75,17 +76,28 @@ const Explore = {
     if (url.id) {
       const city = url.id;
       Read.cityItemList(city).then((snapshot) => {
+        // console.log(snapshot.val());
         const oleholehContainer = document.querySelector('.portfolio-container');
         snapshot.forEach((childSnapshot) => {
           const childData = childSnapshot.val();
           oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
           const upvoteContainer = document.querySelector(`#upvote-${childData.id}`);
-          // upvoteContainer.innerHTML = createUpvoteButton(childData);
-          UpvoteButtonInitiator.init({
-            upvoteButtonContainer: upvoteContainer,
-            data: childData,
-          });
+          upvoteContainer.innerHTML = createUpvotedButton(childData);
+          // UpvoteButtonInitiator.init({
+          //   upvoteButtonContainer: upvoteContainer,
+          //   data: childData,
+          // });
+          const btn = document.querySelector('.btn-vote');
+          // console.log(btn);
           Read.getItemCount(childData.city, childData.id);
+        });
+        const upvoteButton = document.querySelectorAll('.btn-vote');
+        upvoteButton.forEach((item) => {
+          item.addEventListener('click', () => {
+            Write.addUpvoteCount(item.dataset.city, item.dataset.id);
+            Write.addUpvoteUID(item.dataset.city, item.dataset.id, getUserID());
+          });
+          // console.log(item);
         });
         const lightbox = GLightbox({
           selector: '.glightbox',

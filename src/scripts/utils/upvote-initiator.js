@@ -38,8 +38,10 @@ const UpvoteButtonInitiator = {
   _renderUpvote() {
     this._upvoteButtonContainer.innerHTML = createUpvoteButton(this._data);
 
-    const upvoteButton = document.querySelector(`#button-${this._data.id}`);
+    // const upvoteButton = document.querySelector(`#button-${this._data.id}`);
+    const upvoteButton = document.querySelectorAll('.btn-vote');
     upvoteButton.addEventListener('click', async () => {
+      console.log('tombol diklik');
       Write.addUpvoteCount(this._data.city, this._data.id);
       Write.addUpvoteUID(this._data.city, this._data.id, getUserID()).then(() => {
         this._renderButton();
