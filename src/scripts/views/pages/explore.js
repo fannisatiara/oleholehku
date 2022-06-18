@@ -82,16 +82,14 @@ const Explore = {
           const childData = childSnapshot.val();
           oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
           const upvoteContainer = document.querySelector(`#upvote-${childData.id}`);
-          upvoteContainer.innerHTML = createUpvotedButton(childData);
+          upvoteContainer.innerHTML = createUpvoteButton(childData);
           // UpvoteButtonInitiator.init({
           //   upvoteButtonContainer: upvoteContainer,
           //   data: childData,
           // });
-          const btn = document.querySelector('.btn-vote');
-          // console.log(btn);
           Read.getItemCount(childData.city, childData.id);
         });
-        const upvoteButton = document.querySelectorAll('.btn-vote');
+        const upvoteButton = document.querySelectorAll('.upvote');
         upvoteButton.forEach((item) => {
           item.addEventListener('click', () => {
             Write.addUpvoteCount(item.dataset.city, item.dataset.id);

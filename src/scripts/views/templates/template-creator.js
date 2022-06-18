@@ -33,26 +33,12 @@ const createOlehOlehTemplate = (data) => /* html */`
     </div>
 `;
 
-const createUpvoteButton = (data) => {
-  const uid = getUserID();
-  console.log(data.upvote.uid);
-  for (const itemUID in data.upvote.uid) {
-    console.log(itemUID);
-    if (uid === itemUID) {
-      console.log('sudah vote');
-      return /* html */`
-      <a id="button-${data.id}" data-id="${data.id}" data-city="${data.city}" class="portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
-  `;
-    }
-    console.log('belum vote');
-    return /* html */`
-        <a id="button-${data.id}" data-id="${data.id}" data-city="${data.city}" class="btn-vote portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
-    `;
-  }
-};
+const createUpvoteButton = (data) => /* html */ `
+<a id="button-${data.id}" data-id="${data.id}" data-city="${data.city}" class="upvote portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
+ `;
 
 const createUpvotedButton = (data) => /* html */`
-    <a id="button-${data.id}" data-id="${data.id}" class="portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
+    <a id="button-${data.id}" data-id="${data.id}" data-city="${data.city}" class="upvoted portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
 `;
 
 export {
