@@ -35,7 +35,7 @@ const About = {
             <div class="row">
                 <div class="section-title">
                     <h2>Team</h2>
-                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
+                    <p>Website ini dibuat oleh Group CPSG-02 untuk memenuhi tugas Capstone Project SIB Dicoding Batch 2</p>
                 </div>
             </div>
 
@@ -44,8 +44,9 @@ const About = {
                     <div class="member" >
                         <div class="pic"><img id="royan" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4>Royan</h4>
-                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                            <h4>Royan Agist Ramadhan</h4>
+                            <p class="role">Mahasiswa</p>
+                            <p class="quotes">"Setiap orang ada masanya, setiap masa ada orangnya"</p>
                             <div class="social">
                                 <a href="https://www.instagram.com/royanagist/"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/royan-agist-ramadhan-33938919a/"><i class="fa-brands fa-linkedin"></i></a>
@@ -58,8 +59,9 @@ const About = {
                     <div class="member">
                         <div class="pic"><img id="fannisa" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4>Fannisa</h4>
-                            <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                            <h4>Fannisa Tiara Salsabila</h4>
+                            <p class="role">Mahasiswi</p>
+                            <p class="quotes">"Semua yang indah akan menjadi indah ketika kamu menginginkannya menjadi indah"</p>
                             <div class="social">
                                 <a href="https://www.instagram.com/fannisatiara_/"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/fannisa-tiara-salsabila-901048231/"><i class="fa-brands fa-linkedin"></i></a>
@@ -72,8 +74,9 @@ const About = {
                     <div class="member">
                         <div class="pic"><img id="yoga" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4>Yoga</h4>
-                            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                            <h4>Firdaus Yoga Anggoro</h4>
+                            <p class="role">Mahasiswa</p>
+                            <p class="quotes">"Janganlah engkau bersedih, sesungguhnya Allah bersama kita"</p>
                             <div class="social">
                                 <a href="https://www.instagram.com/yogaanggoroo/"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/firdaus-yoga-anggoro-b2136721b/"><i class="fa-brands fa-linkedin"></i></a>
@@ -86,8 +89,9 @@ const About = {
                     <div class="member">
                         <div class="pic"><img id="nadia" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4>Nadia</h4>
-                            <p>"Setiap akhir adalah awal dari sesuatu yang baru"</p>
+                            <h4>Nadia Nur Azizah</h4>
+                            <p class="role">Mahasiswi</p>
+                            <p class="quotes">"Setiap akhir adalah awal dari sesuatu yang baru"</p>
                             <div class="social">
                                 <a href="https://www.instagram.com/nadianuraaa/"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/nadianura/"><i class="fa-brands fa-linkedin"></i></a>
