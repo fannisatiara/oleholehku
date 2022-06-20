@@ -38,7 +38,6 @@ class Read {
     const dbref = ref(getDatabase());
     await onValue(child(dbref, `Oleholehku/${city}/${id}/upvote/uid/${uid}/upvote`), (snapshot) => {
       const upvoted = snapshot.val();
-      console.log(upvoted);
       const upvoteContainer = document.querySelector(`#upvote-${id}`);
       if (upvoted) {
         upvoteContainer.innerHTML = createUpvotedButton(city, id);

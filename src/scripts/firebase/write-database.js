@@ -47,8 +47,8 @@ class Write {
 
   static async addUpvoteUID(city, id, uid) {
     const db = getDatabase();
-    set(ref(db, `Oleholehku/${city}/${id}/upvote/uid/${uid}`), {
-      upvote: false,
+    update(ref(db, `Oleholehku/${city}/${id}/upvote/uid/${uid}`), {
+      uid,
     }).then(() => { console.log(`removed: ${uid}`); });
   }
 }
