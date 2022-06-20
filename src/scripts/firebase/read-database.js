@@ -17,16 +17,10 @@ const app = initializeApp(firebaseConfig);
 
 class Read {
   static async cityItemList(city) {
-    const dbref = ref(getDatabase());
-    const data = await get(child(dbref, `Oleholehku/${city}`), orderByChild('count/count'));
-    return data;
-  }
-
-  static async sortItemList(city) {
     const db = getDatabase();
-    const mostViewedPosts = query(ref(db, `oleholehku/${city}`), orderByChild('count/count'), (snapshot) => {
-      console.log(snapshot.val());
-    });
+    const sortedData = query(ref(db, `Oleholehku/${city}`), orderByChild('upvote/count'));
+    const data = await get(sortedData);
+    return data;
   }
 
   static async allItemList() {
@@ -39,7 +33,7 @@ class Read {
     const dbref = ref(getDatabase());
     await onValue(child(dbref, `Oleholehku/${city}/${id}/upvote/count`), (snapshot) => {
       const countContainer = document.getElementById(`count-${id}`);
-      countContainer.innerHTML = `<p data-aos="zoom-in" data-aos-delay="100" data-aos-duration="100" >${snapshot.val()}</p>`;
+      countContainer.innerHTML = `<p data-aos="zoom-in" data-aos-delay="100" data-aos-duration="100" >${snapshot.val() * -1}</p>`;
     });
   }
 

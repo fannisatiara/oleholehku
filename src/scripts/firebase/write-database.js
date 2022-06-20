@@ -20,14 +20,14 @@ class Write {
   static async addUpvoteCount(city, id) {
     const db = getDatabase();
     update(ref(db, `Oleholehku/${city}/${id}/upvote`), {
-      count: increment(1),
+      count: increment(-1),
     }).then(() => { console.log(`added: ${id}`); });
   }
 
   static async subtractUpvoteCount(city, id) {
     const db = getDatabase();
     update(ref(db, `Oleholehku/${city}/${id}/upvote`), {
-      count: increment(-1),
+      count: increment(1),
     }).then(() => { console.log(`substracted: ${id}`); });
   }
 
