@@ -13,7 +13,7 @@ const Explore = {
     <section class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
+        <div data-aos="fade-right" data-aos-delay="100" class="d-flex justify-content-between align-items-center">
           <h2>Jelajahi Kota</h2>
           <ol>
             <li><a href="index.html">Beranda</a></li>
@@ -28,7 +28,7 @@ const Explore = {
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 d-flex justify-content-center">
+                <div data-aos="fade-left" data-aos-delay="200" class="col-lg-7 d-flex justify-content-center">
                     <ul id="portfolio-flters">
                         <li class="filter active"> <a href="#/explore/">All</a></li>
                         <li class="filter"> <a href="#/explore/Jakarta">Jakarta</a></li>
@@ -60,9 +60,9 @@ const Explore = {
       <div class="container">
 
         <div class="text-center">
-          <h3>Punya Rekomendasi Oleh-Oleh dari Daerahmu?</h3>
-          <p> Bantu kami untuk menyajikan informasi terbaik seputar oleh-oleh khas Indonesia. </p>
-          <a class="recommendation-btn" href="#/recommendation">Ayo!</a>
+          <h3 data-aos="zoom-in" data-aos-delay="100">Punya Rekomendasi Oleh-Oleh dari Daerahmu?</h3>
+          <p data-aos="zoom-in" data-aos-delay="200"> Bantu kami untuk menyajikan informasi terbaik seputar oleh-oleh khas Indonesia. </p>
+          <a data-aos="zoom-in" data-aos-delay="300" class="recommendation-btn" href="#/recommendation">Ayo!</a>
         </div>
 
       </div>

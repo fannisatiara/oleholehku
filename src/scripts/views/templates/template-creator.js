@@ -5,7 +5,7 @@
 
 const createOlehOlehTemplate = (data) => /* html */`
 
-    <div class="col-lg-4 col-md-6 portfolio-item">
+    <div data-aos="zoom-in" data-aos-delay="100" class="col-lg-4 col-md-6 portfolio-item">
         <div class="portfolio-wrap">
             <img src="${data.imgUrl}" title="${data.name}" tabindex="0">
             <div class="portfolio-info">
@@ -33,11 +33,11 @@ const createOlehOlehTemplate = (data) => /* html */`
 `;
 
 const createUpvoteButton = (city, id) => /* html */ `
-<a id="button-${id}" data-id="${id}" data-city="${city}" class="upvote portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
+    <a data-aos="zoom-in" data-aos-delay="100" id="button-${id}" data-id="${id}" data-city="${city}" class="upvote portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
  `;
 
 const createUpvotedButton = (city, id) => /* html */`
-    <a id="button-${id}" data-id="${id}" data-city="${city}" class="upvoted portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
+    <a data-aos="zoom-in" data-aos-delay="100" id="button-${id}" data-id="${id}" data-city="${city}" class="upvoted portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
 `;
 
 export {
