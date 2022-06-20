@@ -5,7 +5,6 @@ import UrlParser from '../../routes/url-parser';
 import Read from '../../firebase/read-database';
 import { isUserSignedIn, getUserID } from '../../firebase/auth';
 import Write from '../../firebase/write-database';
-import UpvoteButtonInitiator from '../../utils/upvote-initiator';
 
 const Explore = {
   async render() {
@@ -76,27 +75,37 @@ const Explore = {
     if (url.id) {
       const city = url.id;
       Read.cityItemList(city).then((snapshot) => {
-        // console.log(snapshot.val());
         const oleholehContainer = document.querySelector('.portfolio-container');
         snapshot.forEach((childSnapshot) => {
           const childData = childSnapshot.val();
           oleholehContainer.innerHTML += createOlehOlehTemplate(childData);
-          const upvoteContainer = document.querySelector(`#upvote-${childData.id}`);
-          upvoteContainer.innerHTML = createUpvoteButton(childData);
-          // UpvoteButtonInitiator.init({
-          //   upvoteButtonContainer: upvoteContainer,
-          //   data: childData,
-          // });
+          if (isUserSignedIn()) {
+            Write.addUpvoteUID(childData.city, childData.id, getUserID()).then(() => {
+              Read.upvoteButtonInitiator(childData.city, childData.id, getUserID());
+            });
+          } else {
+            const upvoteContainer = document.querySelector(`#upvote-${childData.id}`);
+            upvoteContainer.innerHTML = createUpvoteButton(childData);
+          }
           Read.getItemCount(childData.city, childData.id);
         });
-        const upvoteButton = document.querySelectorAll('.upvote');
-        upvoteButton.forEach((item) => {
-          item.addEventListener('click', () => {
-            Write.addUpvoteCount(item.dataset.city, item.dataset.id);
-            Write.addUpvoteUID(item.dataset.city, item.dataset.id, getUserID());
+        if (!isUserSignedIn()) {
+          const upvoteButton = document.querySelectorAll('.upvote');
+          upvoteButton.forEach((item) => {
+            item.addEventListener('click', () => {
+              snackbar.show({
+                text: 'Please sign in to upvote!',
+                pos: 'top-center',
+                backgroundColor: '#ffcd38',
+                textColor: 'black',
+                actionTextColor: 'black',
+                actionText: '<i class="fa-solid fa-xmark"></i>',
+                duration: 3000,
+                customClass: 'customSnackbar',
+              });
+            });
           });
-          // console.log(item);
-        });
+        }
         const lightbox = GLightbox({
           selector: '.glightbox',
         });
@@ -108,11 +117,34 @@ const Explore = {
           childSnapshot.forEach((grandchildSnapshot) => {
             const data = grandchildSnapshot.val();
             oleholehContainer.innerHTML += createOlehOlehTemplate(data);
-            const upvoteContainer = document.querySelector(`#upvote-${data.id}`);
-            upvoteContainer.innerHTML = createUpvoteButton(data);
+            if (isUserSignedIn()) {
+              Write.addUpvoteUID(data.city, data.id, getUserID()).then(() => {
+                Read.upvoteButtonInitiator(data.city, data.id, getUserID());
+              });
+            } else {
+              const upvoteContainer = document.querySelector(`#upvote-${data.id}`);
+              upvoteContainer.innerHTML = createUpvoteButton(data);
+            }
             Read.getItemCount(data.city, data.id);
           });
         });
+        if (!isUserSignedIn()) {
+          const upvoteButton = document.querySelectorAll('.upvote');
+          upvoteButton.forEach((item) => {
+            item.addEventListener('click', () => {
+              snackbar.show({
+                text: 'Please sign in to upvote!',
+                pos: 'top-center',
+                backgroundColor: '#ffcd38',
+                textColor: 'black',
+                actionTextColor: 'black',
+                actionText: '<i class="fa-solid fa-xmark"></i>',
+                duration: 3000,
+                customClass: 'customSnackbar',
+              });
+            });
+          });
+        }
         const lightbox = GLightbox({
           selector: '.glightbox',
         });

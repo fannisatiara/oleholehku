@@ -2,7 +2,6 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-restricted-syntax */
-import { getUserID } from '../../firebase/auth';
 
 const createOlehOlehTemplate = (data) => /* html */`
 
@@ -33,12 +32,12 @@ const createOlehOlehTemplate = (data) => /* html */`
     </div>
 `;
 
-const createUpvoteButton = (data) => /* html */ `
-<a id="button-${data.id}" data-id="${data.id}" data-city="${data.city}" class="upvote portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
+const createUpvoteButton = (city, id) => /* html */ `
+<a id="button-${id}" data-id="${id}" data-city="${city}" class="upvote portfolio-lightbox" title="upvote"><i class="fa-regular fa-thumbs-up"></i></a>
  `;
 
-const createUpvotedButton = (data) => /* html */`
-    <a id="button-${data.id}" data-id="${data.id}" data-city="${data.city}" class="upvoted portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
+const createUpvotedButton = (city, id) => /* html */`
+    <a id="button-${id}" data-id="${id}" data-city="${city}" class="upvoted portfolio-lightbox" title="upvote"><i class="fa-solid fa-thumbs-up"></i></a>
 `;
 
 export {

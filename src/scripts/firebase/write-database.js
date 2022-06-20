@@ -2,7 +2,6 @@ import {
   getDatabase,
   ref,
   set,
-  remove,
   increment,
   update,
 } from 'firebase/database';
@@ -32,17 +31,24 @@ class Write {
     }).then(() => { console.log(`substracted: ${id}`); });
   }
 
-  static async addUpvoteUID(city, id, uid) {
+  static async updateUpvoteTrue(city, id, uid) {
     const db = getDatabase();
-    set(ref(db, `Oleholehku/${city}/${id}/upvote/uid/${uid}`), {
-      uid,
+    update(ref(db, `Oleholehku/${city}/${id}/upvote/uid/${uid}`), {
+      upvote: true,
     }).then(() => { console.log(`added: ${uid}`); });
   }
 
-  static async removeUpvoteUID(city, id, uid) {
+  static async updateUpvoteFalse(city, id, uid) {
     const db = getDatabase();
-    remove(ref(db, `Oleholehku/${city}/${id}/upvote/uid/${uid}`), {
-      uid,
+    update(ref(db, `Oleholehku/${city}/${id}/upvote/uid/${uid}`), {
+      upvote: false,
+    }).then(() => { console.log(`removed: ${uid}`); });
+  }
+
+  static async addUpvoteUID(city, id, uid) {
+    const db = getDatabase();
+    set(ref(db, `Oleholehku/${city}/${id}/upvote/uid/${uid}`), {
+      upvote: false,
     }).then(() => { console.log(`removed: ${uid}`); });
   }
 }
