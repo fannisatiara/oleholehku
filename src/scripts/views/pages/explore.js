@@ -13,7 +13,7 @@ const Explore = {
     <section class="breadcrumbs">
       <div class="container">
 
-        <div data-aos="fade-right" data-aos-delay="100" class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center">
           <h2>Jelajahi Kota</h2>
           <ol>
             <li><a href="index.html">Beranda</a></li>
@@ -28,7 +28,7 @@ const Explore = {
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
-                <div data-aos="fade-left" data-aos-delay="200" class="col-lg-7 d-flex justify-content-center">
+                <div class="col-lg-7 d-flex justify-content-center">
                     <ul id="portfolio-flters">
                         <li id="all" class="filter activeFilter"> <a href="#/explore/">All</a></li>
                         <li id="jakarta" class="filter"> <a href="#/explore/Jakarta">Jakarta</a></li>
