@@ -29,6 +29,26 @@ class App {
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
+    const current = document.querySelector('.active');
+    current.classList.remove('active');
+
+    switch (url) {
+      case '/home':
+        document.getElementById('home').className += ' active';
+        break;
+      case '/about':
+        document.getElementById('about').className += ' active';
+        break;
+      case '/explore':
+        document.getElementById('explore').className += ' active';
+        break;
+      case '/explore/:id':
+        document.getElementById('explore').className += ' active';
+        break;
+      default:
+        document.getElementById('home').className += ' active';
+        break;
+    }
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();

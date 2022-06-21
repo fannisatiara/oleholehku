@@ -45,15 +45,15 @@ window.addEventListener('load', () => {
 });
 
 // navbar active button
-const btnContainer = document.getElementById('navbar');
-const btns = btnContainer.getElementsByClassName('nav-link scrollto');
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener('click', function () {
-    const current = document.getElementsByClassName('active');
-    current[0].className = current[0].className.replace(' active', '');
-    this.className += ' active';
-  });
-}
+// const btnContainer = document.getElementById('navbar');
+// const btns = btnContainer.getElementsByClassName('nav-link scrollto');
+// for (let i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener('click', function () {
+//     const current = document.getElementsByClassName('active');
+//     current[0].className = current[0].className.replace(' active', '');
+//     this.className += ' active';
+//   });
+// }
 
 // getData('jakarta');
 
