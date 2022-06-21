@@ -30,11 +30,11 @@ const Explore = {
             <div class="row">
                 <div data-aos="fade-left" data-aos-delay="200" class="col-lg-7 d-flex justify-content-center">
                     <ul id="portfolio-flters">
-                        <li class="filter active"> <a href="#/explore/">All</a></li>
-                        <li class="filter"> <a href="#/explore/Jakarta">Jakarta</a></li>
-                        <li class="filter"> <a href="#/explore/Madiun">Madiun</a></li>
-                        <li class="filter"> <a href="#/explore/Tasikmalaya">Tasikmalaya</a></li>
-                        <li class="filter"> <a href="#/explore/Bandung">Bandung</a></li>
+                        <li id="all" class="filter activeFilter"> <a href="#/explore/">All</a></li>
+                        <li id="jakarta" class="filter"> <a href="#/explore/Jakarta">Jakarta</a></li>
+                        <li id="madiun" class="filter"> <a href="#/explore/Madiun">Madiun</a></li>
+                        <li id="tasikmalaya" class="filter"> <a href="#/explore/Tasikmalaya">Tasikmalaya</a></li>
+                        <li id="bandung" class="filter"> <a href="#/explore/Bandung">Bandung</a></li>
                     </ul>
                 </div>
 
@@ -166,15 +166,26 @@ const Explore = {
         });
       }
     });
-    // highlight filter city
-    const filtersContainer = document.getElementById('portfolio-flters');
-    const filters = filtersContainer.getElementsByClassName('filter');
-    for (let i = 0; i < filters.length; i++) {
-      filters[i].addEventListener('click', function () {
-        const current = document.getElementsByClassName('active');
-        current[1].className = current[1].className.replace(' active', '');
-        this.className += ' active';
-      });
+
+    const current = document.querySelector('.activeFilter');
+    current.classList.remove('activeFilter');
+
+    switch (url.id) {
+      case 'Jakarta':
+        document.getElementById('jakarta').className += ' activeFilter';
+        break;
+      case 'Madiun':
+        document.getElementById('madiun').className += ' activeFilter';
+        break;
+      case 'Tasikmalaya':
+        document.getElementById('tasikmalaya').className += ' activeFilter';
+        break;
+      case 'Bandung':
+        document.getElementById('bandung').className += ' activeFilter';
+        break;
+      default:
+        document.getElementById('all').className += ' activeFilter';
+        break;
     }
   },
 
