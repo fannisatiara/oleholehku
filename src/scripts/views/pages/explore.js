@@ -37,6 +37,8 @@ const Explore = {
                         <li id="bandung" class="filter"> <a href="#/explore/Bandung">Bandung</a></li>
                     </ul>
                 </div>
+
+                
             </div>
         </div>
 
