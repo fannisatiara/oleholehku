@@ -2,6 +2,8 @@
 
 Capstone Project SIB Dicoding 2022.
 
+<img src="https://github.com/royanagist/oleholehku/blob/master/src/public/icons/favicon.png?raw=true" alt="animated" width="200"/>
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install necessary packages.
