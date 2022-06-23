@@ -37,16 +37,6 @@ const Explore = {
                         <li id="bandung" class="filter"> <a href="#/explore/Bandung">Bandung</a></li>
                     </ul>
                 </div>
-
-                <div class="col-lg-3 d-flex justify-content-center">
-                    <div class="search-container">
-                    <input placeholder="Masukkan kota" class="form-control" type="search">                           
-                </div>
-                <div class="col-lg-2 d-flex justify-content-start">
-                    <div class="button-container">
-                        <button class="btn btn-signup btn-warning float-end">Cari</button>
-                    </div>
-                </div>
             </div>
         </div>
 
