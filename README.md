@@ -24,7 +24,7 @@ npm run build
 ```
 
 ## Contributors
-* Royan Agist Ramadhan
-* Nadia Nur Azizah
-* Firdaus Yoga Anggoro
-* Fannisa Tiara Salsabila
+* Royan Agist Ramadhan | [royanagist](https://github.com/royanagist)
+* Nadia Nur Azizah | [nadianura](https://github.com/nadianura)
+* Firdaus Yoga Anggoro | [yogaanggoroo](https://github.com/yogaanggoroo)
+* Fannisa Tiara Salsabila | [fannisatiara](https://github.com/fannisatiara)
