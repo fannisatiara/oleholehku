@@ -27,7 +27,7 @@ const Explore = {
     <!-- ======= Explore Section ======= -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-7 d-flex justify-content-center">
                     <ul id="portfolio-flters">
                         <li id="all" class="filter activeFilter"> <a href="#/explore/">All</a></li>
