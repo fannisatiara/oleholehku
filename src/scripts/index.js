@@ -8,6 +8,8 @@ import AOS from 'aos';
 import App from './views/app';
 import { initFirebaseAuth } from './firebase/auth';
 import 'aos/dist/aos.css';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import swRegister from './utils/sw-register';
 
 const app = new App({

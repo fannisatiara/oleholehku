@@ -7,7 +7,7 @@ const createOlehOlehTemplate = (data) => /* html */`
 
     <div data-aos="zoom-in" data-aos-delay="100" class="col-lg-4 col-md-6 portfolio-item">
         <div class="portfolio-wrap">
-            <img src="${data.imgUrl}" title="${data.name}" tabindex="0">
+            <img class="lazyload" data-src="${data.imgUrl}" title="${data.name}" tabindex="0">
             <div class="portfolio-info">
                 <h4>${data.name}</h4>
                 <p>${data.city}</p>
