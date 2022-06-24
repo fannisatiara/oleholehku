@@ -16,11 +16,9 @@ const app = firebase.initializeApp(firebaseConfig);
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 const provider = new GoogleAuthProvider();
 const uiConfig = {
-  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
   signInSuccessUrl: '#/home',
   signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
   ],
@@ -50,22 +48,16 @@ function signOutUser() {
     });
 }
 
-// const userPicElement = document.getElementById('user-pic');
 const userNameElement = document.getElementById('user-name');
 const signInButtonElement = document.getElementById('signin');
 const signOutButtonElement = document.getElementById('logout');
-// const signInSnackbarElement = document.getElementById('must-signin-snackbar');
-
-// Returns the signed-in user's profile Pic URL.
-function getProfilePicUrl() {
-  return getAuth().currentUser.photoURL || '/images/profile_placeholder.png';
-}
 
 // Returns the signed-in user's display name.
 function getUserName() {
   return getAuth().currentUser.displayName;
 }
 
+// Returns the signed-in user's id.
 function getUserID() {
   return getAuth().currentUser.uid;
 }
@@ -74,17 +66,12 @@ function getUserID() {
 function authStateObserver(user) {
   if (user) {
     // User is signed in!
-    // Get the signed-in user's profile pic and name.
-    // const profilePicUrl = getProfilePicUrl();
     const userName = getUserName();
 
-    // Set the user's profile pic and name.
-    // userPicElement.style.backgroundImage = `url(${addSizeToGoogleProfilePic(profilePicUrl)})`;
     userNameElement.textContent = userName;
 
     // Show user's profile and sign-out button.
     userNameElement.removeAttribute('hidden');
-    // userPicElement.removeAttribute('hidden');
     signOutButtonElement.removeAttribute('hidden');
 
     // Hide sign-in button.
@@ -93,7 +80,6 @@ function authStateObserver(user) {
     // User is signed out!
     // Hide user's profile and sign-out button.
     userNameElement.setAttribute('hidden', 'true');
-    // userPicElement.setAttribute('hidden', 'true');
     signOutButtonElement.setAttribute('hidden', 'true');
 
     // Show sign-in button.
