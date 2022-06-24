@@ -73,6 +73,7 @@
   }
   .team .member .quotes {
     font-size: 15px;
+    min-height: 50px;
   }
   .team .member span {
     display: block;
