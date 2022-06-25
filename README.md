@@ -2,7 +2,8 @@
 
 Capstone Project SIB Dicoding 2022.
 
-<img src="https://github.com/royanagist/oleholehku/blob/master/src/public/icons/favicon.png?raw=true" alt="animated" width="200"/>
+<img src="https://github.com/royanagist/oleholehku/blob/master/src/public/icons/favicon.png?raw=true" alt="logo" width="200"/>
+Aplikasi ini dapat diakses <a href="https://oleh-olehku.web.app">di sini</a>
 
 ## Installation
 
